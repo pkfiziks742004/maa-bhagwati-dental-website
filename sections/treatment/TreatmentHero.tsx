@@ -38,7 +38,7 @@ export const TreatmentHero = ({ service }: { service: ServiceData }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6 leading-tight"
+              className="fluid-h1 font-bold text-text mb-6 leading-tight"
             >
               {service.title}
             </motion.h1>

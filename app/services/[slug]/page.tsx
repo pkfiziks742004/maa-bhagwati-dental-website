@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import { TreatmentHero } from "@/sections/treatment/TreatmentHero";
 import { TreatmentOverview } from "@/sections/treatment/TreatmentOverview";
 import { TreatmentSteps } from "@/sections/treatment/TreatmentSteps";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { TreatmentFAQ } from "@/sections/treatment/TreatmentFAQ";
 import { AppointmentCTA } from "@/sections/AppointmentCTA";
 
@@ -67,9 +66,6 @@ export default async function TreatmentPage({ params }: Props) {
         
         {/* 3. Procedure Timeline */}
         <TreatmentSteps service={service} />
-        
-        {/* 4. Before & After Cases */}
-        <BeforeAfterSlider filterCategory={service.category} />
         
         {/* 5. FAQs specific to treatment */}
         <TreatmentFAQ service={service} />

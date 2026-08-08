@@ -10,7 +10,7 @@ export const VideoTestimonials = () => {
     <section className="py-24 bg-background-light relative border-t border-border/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-           <h2 className="text-3xl md:text-5xl font-bold text-text mb-6">Patient Video Diaries</h2>
+           <h2 className="fluid-h2 font-bold text-text mb-6">Patient Video Diaries</h2>
            <p className="text-lg text-text/70">
              Watch our patients share their personal journey and the life-changing results they achieved at our clinic.
            </p>

@@ -33,7 +33,7 @@ export const NewsletterCTA = () => {
             <Mail size={32} />
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-10">Stay Informed</h2>
+          <h2 className="fluid-h2 font-bold text-white mb-4 relative z-10">Stay Informed</h2>
           <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto relative z-10">
             Subscribe to our newsletter for the latest dental tips, exclusive clinic offers, and modern healthcare insights.
           </p>

@@ -33,7 +33,7 @@ export const AppointmentCTA = () => {
 
           {/* Left Side: Content */}
           <div className="relative z-10 p-8 md:p-12 lg:p-16 w-full md:w-[60%] flex flex-col items-start text-left justify-center">
-            <h2 className="text-4xl md:text-5xl lg:text-[3rem] font-bold mb-6 leading-[1.15]">
+            <h2 className="fluid-h2 font-bold mb-6 leading-[1.15]">
               Ready to Get Your <br/> Perfect Smile?
             </h2>
             <div className="w-16 h-1.5 bg-green-400 rounded-full mb-6 flex items-center relative">

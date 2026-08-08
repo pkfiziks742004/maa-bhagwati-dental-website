@@ -111,7 +111,7 @@ export const BeforeAfterGallery = () => {
           <h3 className="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-4">
             REAL TRANSFORMATIONS
           </h3>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-text mb-4 tracking-tight">
+          <h2 className="fluid-h2 font-extrabold text-text mb-4 tracking-tight">
             Before & After
           </h2>
           <p className="text-text/60 font-medium text-lg">

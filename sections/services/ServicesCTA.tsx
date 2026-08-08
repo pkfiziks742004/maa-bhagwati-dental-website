@@ -20,7 +20,7 @@ export const ServicesCTA = () => {
 
           {/* Left Content */}
           <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-[42px] font-extrabold text-white mb-4 leading-[1.15]">
+            <h2 className="fluid-h2 font-extrabold text-white mb-4 leading-[1.15]">
               Ready to Transform Your <br className="hidden md:block" />
               <span className="text-[#17B8C8]">Smile & Confidence?</span>
             </h2>

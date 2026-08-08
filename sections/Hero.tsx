@@ -89,7 +89,7 @@ export const Hero = () => {
             </motion.div>
             
             {/* Headline */}
-            <h1 className="text-[2.5rem] md:text-5xl lg:text-6xl font-extrabold text-text leading-[1.1] mb-5 tracking-tight">
+            <h1 className="fluid-h1 font-extrabold text-text mb-5 tracking-tight">
               Premium Dental & <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Cosmetic Care.</span>
             </h1>

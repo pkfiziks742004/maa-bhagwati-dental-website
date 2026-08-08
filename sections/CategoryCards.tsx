@@ -20,7 +20,7 @@ export const CategoryCards = () => {
             </span>
             <div className="h-[1px] w-12 bg-primary/30" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-text mb-4">
+          <h2 className="fluid-h2 font-extrabold text-text mb-4">
             Choose Your Care
           </h2>
           <p className="text-text/70 text-base md:text-lg font-medium">

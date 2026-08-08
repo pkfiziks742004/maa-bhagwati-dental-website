@@ -45,7 +45,7 @@ export const ServicesHero = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold text-[#1b365d] leading-[1.1] mb-6">
+            <h1 className="fluid-h1 font-extrabold text-[#1b365d] leading-[1.1] mb-6">
               Comprehensive Dental & Cosmetology Solutions
             </h1>
             

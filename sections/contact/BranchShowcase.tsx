@@ -12,7 +12,7 @@ export const BranchShowcase = () => {
     <section className="py-24 bg-background-light relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-           <h2 className="text-3xl md:text-5xl font-bold text-text mb-6">Our Premium Clinics</h2>
+           <h2 className="fluid-h2 font-bold text-text mb-6">Our Premium Clinics</h2>
            <p className="text-lg text-text/70">
              Visit our state-of-the-art facilities designed for your comfort and equipped with the latest dental technology.
            </p>

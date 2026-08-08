@@ -46,11 +46,11 @@ const SliderCard = ({
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: index * 0.15, duration: 0.5 }}
-      className="snap-start shrink-0 w-[85vw] md:w-[420px] group cursor-ew-resize"
+      className="snap-start shrink-0 w-[85vw] sm:w-[320px] md:w-[340px] lg:w-[360px] xl:w-[380px] group cursor-ew-resize"
     >
       {/* Card */}
       <div
-        className="relative aspect-[4/3] rounded-[20px] overflow-hidden shadow-[0_15px_40px_-10px_rgba(0,0,0,0.18)] border border-black/5 select-none"
+        className="relative aspect-[16/10] rounded-[16px] overflow-hidden shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)] border border-black/5 select-none"
         onClick={onClick}
       >
         {/* After image (background) */}
@@ -106,12 +106,13 @@ const SliderCard = ({
           }}
           onClick={(e) => e.stopPropagation()}
           className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
+          style={{ touchAction: "pan-y" }}
           aria-label={`${item.label} before after slider`}
         />
       </div>
 
       {/* Label */}
-      <h4 className="mt-4 font-bold text-lg text-center text-[#1b365d] group-hover:text-[#17B8C8] transition-colors">
+      <h4 className="mt-4 font-bold text-base md:text-lg text-center text-[#1b365d] group-hover:text-[#17B8C8] transition-colors">
         {item.label}
       </h4>
       <p className="text-xs text-center text-text/50 mt-1 font-medium">
@@ -146,12 +147,12 @@ export const BeforeAfterSlider = ({
   };
 
   return (
-    <section className="py-24 bg-background-light border-t border-border/50">
+    <section className="py-12 md:py-16 bg-background-light border-t border-border/50">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <SectionTitle
           title="Transformations"
           subtitle="Real Results"
-          className="mb-16"
+          className="mb-8 md:mb-12"
         />
 
         <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory hide-scrollbar -mx-4 px-4 md:mx-0 md:px-0 justify-center">
@@ -187,7 +188,7 @@ export const BeforeAfterSlider = ({
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="w-full max-w-3xl aspect-[4/3] relative rounded-2xl overflow-hidden shadow-2xl select-none"
+              className="w-full max-w-4xl max-h-[80vh] aspect-[16/10] relative rounded-2xl overflow-hidden shadow-2xl select-none"
               onClick={(e) => e.stopPropagation()}
             >
               {/* After (bg) */}
@@ -239,6 +240,7 @@ export const BeforeAfterSlider = ({
                 value={lbSliderPos}
                 onChange={(e) => setLbSliderPos(Number(e.target.value))}
                 className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
+                style={{ touchAction: "pan-y" }}
                 aria-label="Lightbox before after slider"
               />
 
