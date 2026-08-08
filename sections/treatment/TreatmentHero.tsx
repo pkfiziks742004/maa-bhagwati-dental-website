@@ -9,7 +9,7 @@ import { ServiceData } from "@/constants/services";
 export const TreatmentHero = ({ service }: { service: ServiceData }) => {
   return (
     <section className="relative pt-28 pb-20 bg-background-light overflow-hidden border-b border-border/50">
-       <div className="absolute inset-0 opacity-5 bg-[url('/grid-pattern.svg')] bg-center pointer-events-none" />
+       <div className="absolute inset-0 opacity-5 bg-grid-pattern bg-center pointer-events-none" />
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">
          <div className="max-w-4xl mx-auto text-center">

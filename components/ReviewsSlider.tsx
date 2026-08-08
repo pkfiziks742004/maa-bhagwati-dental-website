@@ -16,7 +16,7 @@ export const ReviewsSlider = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div className="flex items-center gap-4 mb-8 bg-white p-4 rounded-2xl border border-border inline-flex shadow-sm">
         <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border shadow-sm shrink-0 overflow-hidden">
           {/* Mock Google G logo */}

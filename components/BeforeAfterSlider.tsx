@@ -147,7 +147,7 @@ export const BeforeAfterSlider = ({
   };
 
   return (
-    <section className="py-12 md:py-16 bg-background-light border-t border-border/50">
+    <section className="py-12 md:py-16 bg-background-light border-t border-border/50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <SectionTitle
           title="Transformations"

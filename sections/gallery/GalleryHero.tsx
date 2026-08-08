@@ -11,7 +11,7 @@ export const GalleryHero = () => {
     <section className="relative pt-32 pb-20 overflow-hidden bg-background-light">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50 z-10" />
-        <div className="absolute inset-0 bg-[url('/gallery/clinic-reception.jpg')] bg-cover bg-center opacity-10 z-0 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gallery-reception bg-cover bg-center opacity-10 z-0 mix-blend-overlay" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 text-center">
