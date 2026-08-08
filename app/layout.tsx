@@ -1,0 +1,144 @@
+import type { Metadata, Viewport } from "next";
+import { Inter, Outfit } from "next/font/google";
+import "./globals.css";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap", // Ensure text remains visible during webfont load
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#0047AB", // Primary brand color
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.maabhagwatidental.com"),
+  title: {
+    default: "Maa Bhagwati Dental Care | Laser & Cosmodent",
+    template: "%s | Maa Bhagwati Dental Care",
+  },
+  description: "Premium dental clinic offering advanced laser dentistry, dental implants, and cosmetic treatments in New Delhi.",
+  keywords: ["Best Dentist in New Delhi", "Laser Root Canal", "Dental Implants Delhi", "Hair Transplant", "Cosmodent", "Braces"],
+  authors: [{ name: "Maa Bhagwati Dental Care" }],
+  creator: "Maa Bhagwati Dental Care",
+  publisher: "Maa Bhagwati Dental Care",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Maa Bhagwati Dental Care",
+    description: "Premium dental clinic offering advanced laser and cosmodent treatments.",
+    url: "https://www.maabhagwatidental.com",
+    siteName: "Maa Bhagwati Dental Care",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/gallery/clinic-reception.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Maa Bhagwati Dental Care Clinic Reception",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maa Bhagwati Dental Care",
+    description: "Premium dental clinic offering advanced laser and cosmodent treatments.",
+    creator: "@mbdentalcare",
+    images: ["/gallery/clinic-reception.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  }
+};
+
+import Providers from "@/components/Providers";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
+      <head>
+        {/* Preconnect to external domains if necessary */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+      </head>
+      <body className="antialiased min-h-screen flex flex-col bg-background text-text selection:bg-primary/20">
+        <Providers>
+          {children}
+          <FloatingWhatsApp />
+        </Providers>
+        
+        {/* Global LocalBusiness / Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["Dentist", "MedicalOrganization", "LocalBusiness"],
+              "name": "Maa Bhagwati Dental Care",
+              "image": "https://www.maabhagwatidental.com/gallery/clinic-reception.jpg",
+              "@id": "https://www.maabhagwatidental.com",
+              "url": "https://www.maabhagwatidental.com",
+              "telephone": "+917906174142",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Purana Mangroli Road, Badi Tanki Ke Paas, Jewar",
+                "addressLocality": "Gautam Buddha Nagar",
+                "addressRegion": "Uttar Pradesh",
+                "postalCode": "203135",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 28.591965,
+                "longitude": 77.127591
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "10:00",
+                "closes": "20:00"
+              }
+            })
+          }}
+        />
+      </body>
+    </html>
+  );
+}

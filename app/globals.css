@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Color System */
+  --color-primary: #0a7a7a; /* Teal from Logo */
+  --color-secondary: #1b365d; /* Dark Navy from Logo */
+  --color-accent: #ecf9f9; /* Light Cyan Background from Logo */
+  --color-background-light: #F8FAFC;
+  --color-text: #1F2937;
+  --color-border: #E5E7EB;
+
+  /* Border Radius */
+  --radius-xl: 20px;
+  --radius-card: 20px;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 40px -10px rgba(0,0,0,0.08);
+  --shadow-premium: 0 20px 40px -15px rgba(0,0,0,0.05);
+
+  /* Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1F2937;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Fixed header ke neeche se sections scroll karain */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-soft;
+  }
+  .glass-dark {
+    @apply bg-black/80 backdrop-blur-md border border-white/10 shadow-soft;
+  }
+  
+  .container {
+    max-width: 1400px !important;
+  }
+}
