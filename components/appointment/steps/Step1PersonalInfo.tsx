@@ -1,5 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { AppointmentFormValues } from "@/components/forms/AppointmentSchema";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 export const Step1PersonalInfo = () => {
   const { register, formState: { errors } } = useFormContext<AppointmentFormValues>();
@@ -24,7 +25,7 @@ export const Step1PersonalInfo = () => {
           <input
             {...register("mobile")}
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-            placeholder="7906174142"
+            placeholder={CONTACT_DETAILS.primaryPhone.replace(/\D/g, "").slice(-10)}
           />
           {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile.message}</p>}
         </div>

@@ -5,8 +5,10 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Calendar, Users, Award, Monitor, Sparkles, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useAppointmentModal } from "@/contexts/AppointmentModalContext";
 
 export const CategoryCards = () => {
+  const { openModal } = useAppointmentModal();
   return (
     <section id="cares" className="relative z-30 py-16 lg:py-20 bg-[#f8fafc]">
       <div className="container mx-auto px-4 md:px-6 max-w-[1400px]">
@@ -55,7 +57,10 @@ export const CategoryCards = () => {
               <img 
                 src="/about/Dental Care.png" 
                 alt="Dental Clinic" 
+                width={800}
+                height={800}
                 className="w-full h-full object-cover object-[center_right] opacity-90"
+                loading="lazy"
               />
             </div>
 
@@ -154,9 +159,9 @@ export const CategoryCards = () => {
               <Link href="/services/" className="flex-1 bg-[#57B857] text-white hover:bg-[#469e46] py-2.5 px-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors text-xs md:text-sm">
                 Explore Dental Services <ArrowRight size={14} />
               </Link>
-              <Link href="/appointment/" className="flex-1 bg-white text-[#57B857] border-2 border-[#57B857] hover:bg-[#57B857]/5 py-2.5 px-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors text-xs md:text-sm">
+              <button onClick={openModal} className="flex-1 bg-white text-[#57B857] border-2 border-[#57B857] hover:bg-[#57B857]/5 py-2.5 px-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors text-xs md:text-sm">
                 <Calendar size={14} /> Book Appointment
-              </Link>
+              </button>
             </div>
           </motion.div>
 
@@ -176,7 +181,10 @@ export const CategoryCards = () => {
               <img 
                 src="/about/Cosmodent.png" 
                 alt="Cosmodent Treatment" 
+                width={800}
+                height={800}
                 className="w-full h-full object-cover object-[center_right] opacity-90"
+                loading="lazy"
               />
             </div>
 
@@ -280,9 +288,9 @@ export const CategoryCards = () => {
               <Link href="/services/" className="flex-1 bg-[#17B8C8] text-white hover:bg-[#139dae] py-2.5 px-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors text-xs md:text-sm">
                 Explore Cosmodent Services <ArrowRight size={14} />
               </Link>
-              <Link href="/appointment/" className="flex-1 bg-white text-[#17B8C8] border-2 border-[#17B8C8] hover:bg-[#17B8C8]/5 py-2.5 px-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors text-xs md:text-sm">
+              <button onClick={openModal} className="flex-1 bg-white text-[#17B8C8] border-2 border-[#17B8C8] hover:bg-[#17B8C8]/5 py-2.5 px-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors text-xs md:text-sm">
                 <Calendar size={14} /> Book Appointment
-              </Link>
+              </button>
             </div>
           </motion.div>
 

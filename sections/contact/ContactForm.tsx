@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
 import { Send, CheckCircle } from "lucide-react";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 const ContactSchema = z.object({
   fullName: z.string().min(3, "Name must be at least 3 characters").max(50),
@@ -87,7 +88,7 @@ export const ContactForm = () => {
             <input
               {...register("mobile")}
               className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-background-light"
-              placeholder="7906174142"
+              placeholder={CONTACT_DETAILS.primaryPhone.replace(/\D/g, "").slice(-10)}
             />
             {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile.message}</p>}
           </div>

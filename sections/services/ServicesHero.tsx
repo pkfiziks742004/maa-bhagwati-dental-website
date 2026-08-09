@@ -9,25 +9,23 @@ export const ServicesHero = () => {
   return (
     <section className="relative w-full bg-white overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24 min-h-[420px] md:min-h-[500px] flex items-center">
       
-      {/* Background Image with Soft Edge Fade (Matching Home Page) */}
+      {/* Background Image with Soft Edge Fade (Desktop) / Subtle Overlay (Mobile) */}
       <div 
         className="absolute inset-0 md:left-auto md:right-0 w-full md:w-[65%] lg:w-[55%] h-full z-0"
-        style={{
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.8) 50%, black 100%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.8) 50%, black 100%)'
-        }}
       >
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent md:hidden z-10 pointer-events-none" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" style={{ width: '40%' }} />
         <Image 
           src="/banner/baner 1.png"
           alt="Dental Chair Setup" 
           fill
-          className="object-cover object-[center_right]"
+          className="object-cover object-[center_right] z-0"
           priority
         />
       </div>
 
-      {/* Mobile Text Readability Overlay (Matching Home Page) */}
-      <div className="absolute inset-0 bg-white/30 md:bg-transparent z-10 pointer-events-none" />
+      {/* Mobile Text Readability Overlay */}
+      <div className="absolute inset-0 bg-white/20 md:bg-transparent z-10 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="grid lg:grid-cols-2 gap-10 items-center">

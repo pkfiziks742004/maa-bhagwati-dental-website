@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -84,6 +85,7 @@ export default function RootLayout({
       <head>
         {/* Preconnect to external domains if necessary */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="manifest" href="/manifest.webmanifest" />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-background text-text selection:bg-primary/20">
         <Providers>
@@ -102,7 +104,7 @@ export default function RootLayout({
               "image": "https://mbdentaljewar.in/Facilities/Reception%20Area%20Image.png",
               "@id": "https://mbdentaljewar.in",
               "url": "https://mbdentaljewar.in",
-              "telephone": "+917906174142",
+              "telephone": CONTACT_DETAILS.primaryPhone,
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
@@ -132,6 +134,21 @@ export default function RootLayout({
                 "closes": "20:00"
               }
             })
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful');
+                  }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                  });
+                });
+              }
+            `
           }}
         />
       </body>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 // Contact Sections
 import { ContactHero } from "@/sections/contact/ContactHero";
@@ -81,7 +82,7 @@ export default function ContactPage() {
       "name": "Maa Bhagwati Dental Care & Cosmodent",
       "url": "https://mbdentaljewar.in",
       "image": "https://mbdentaljewar.in/logo.png",
-      "telephone": "+91 7906174142",
+      "telephone": CONTACT_DETAILS.primaryPhone,
       "priceRange": "₹₹",
       "currenciesAccepted": "INR",
       "paymentAccepted": [

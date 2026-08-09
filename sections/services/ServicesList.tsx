@@ -30,7 +30,7 @@ export const ServicesList = () => {
       <div className="container mx-auto px-4 xl:px-6">
         
         {/* Filter Navigation */}
-        <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2.5 sm:gap-3 mb-12 sm:mb-16 max-w-5xl mx-auto w-full">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16 max-w-5xl mx-auto w-full">
           {FILTER_TABS.map((tab) => {
             const isActive = activeFilter === tab.id;
             const Icon = tab.icon;
@@ -39,7 +39,7 @@ export const ServicesList = () => {
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
                 className={cn(
-                  "flex items-center justify-center sm:justify-start gap-2 px-3 py-3 sm:px-5 sm:py-2.5 rounded-lg sm:rounded-full text-[14px] sm:text-[13px] font-bold transition-all duration-300 w-full sm:w-auto min-h-[54px] sm:min-h-0",
+                  "flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 rounded-full text-[12px] sm:text-[13px] font-bold transition-all duration-300",
                   isActive 
                     ? "bg-[#57B857] text-white shadow-md" 
                     : "bg-white text-text/80 border border-border/50 hover:border-[#57B857] hover:text-[#57B857]"
@@ -81,7 +81,7 @@ export const ServicesList = () => {
                   </div>
 
                   {/* Responsive grid matching screenshot density */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5">
                     {services.map((service, index) => (
                       <ServiceCard
                         key={service.slug}

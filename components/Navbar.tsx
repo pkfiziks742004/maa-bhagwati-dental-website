@@ -3,19 +3,19 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { BookAppointmentButton } from "./BookAppointmentButton";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "Home",         href: "/",               hash: "" },
-  { label: "About",        href: "/",               hash: "about" },
-  { label: "Cares",        href: "/",               hash: "cares" },
-  { label: "Services",     href: "/",               hash: "dental-services" },
-  { label: "About Doctor", href: "/about-doctor/",  hash: "" },
-  { label: "Contact",      href: "/",               hash: "contact" },
+  { label: "Home",         href: "/" },
+  { label: "About",        href: "/about/" },
+  { label: "Cares",        href: "/#cares" },
+  { label: "Services",     href: "/services/" },
+  { label: "About Doctor", href: "/about-doctor/" },
+  { label: "Contact",      href: "/contact/" },
 ];
 
 export const Navbar = () => {
@@ -23,7 +23,6 @@ export const Navbar = () => {
   const [isMobileOpen,     setIsMobileOpen]      = useState(false);
   const [activeLabel,      setActiveLabel]       = useState("Home");
   const pathname = usePathname();
-  const router   = useRouter();
 
   /* ── Scroll shadow ── */
   useEffect(() => {
@@ -35,36 +34,36 @@ export const Navbar = () => {
   /* ── Sync active link with pathname ── */
   useEffect(() => {
     const match = NAV_LINKS.find((l) => {
-      if (l.hash) return false;          // hash links skip
       if (l.href === "/") return pathname === "/";
       return pathname.startsWith(l.href);
     });
     if (match) setActiveLabel(match.label);
+    
+    // Safety check: Ensure body scroll is restored when navigating
+    document.body.style.overflow = "";
   }, [pathname]);
 
-  /* ── Smart click handler — hash scroll ya page navigate ── */
+  /* ── Handle navigation click ── */
   const handleNav = useCallback(
-    (link: (typeof NAV_LINKS)[0], e: React.MouseEvent) => {
+    (link: (typeof NAV_LINKS)[0]) => {
       setActiveLabel(link.label);
       setIsMobileOpen(false);
-
-      if (link.hash) {
-        e.preventDefault();
-        if (pathname !== "/") {
-          // Pehle home page par jao, phir scroll
-          router.push(`/#${link.hash}`);
-        } else {
-          // Same page par hain — smoothly scroll
-          const el = document.getElementById(link.hash);
-          if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }
-      }
-      // hash nahi hai to normal Next.js Link navigation
+      document.body.style.overflow = "";
     },
-    [pathname, router]
+    []
   );
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileOpen]);
 
   return (
     <>
@@ -82,7 +81,7 @@ export const Navbar = () => {
           {/* ── Logo ── */}
           <Link
             href="/"
-            onClick={() => setActiveLabel("Home")}
+            onClick={() => handleNav(NAV_LINKS[0])}
             className="relative flex items-center shrink-0 h-11 w-[140px] sm:h-13 sm:w-[170px] md:h-14 md:w-[200px]"
             aria-label="Maa Bhagwati Home"
           >
@@ -103,8 +102,8 @@ export const Navbar = () => {
               return (
                 <Link
                   key={link.label}
-                  href={link.hash ? `/#${link.hash}` : link.href}
-                  onClick={(e) => handleNav(link, e)}
+                  href={link.href}
+                  onClick={() => handleNav(link)}
                   className={cn(
                     "group relative text-sm font-semibold pb-1 transition-colors duration-200",
                     active ? "text-primary" : "text-text hover:text-primary"
@@ -139,66 +138,60 @@ export const Navbar = () => {
             {isMobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-      </header>
-
-      {/* ════════════════════════════════ MOBILE DRAWER ═══════════════════════ */}
-      <AnimatePresence>
-        {isMobileOpen && (
-          <motion.div
-            id="mobile-menu"
-            key="mobile-menu"
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "tween", duration: 0.25, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-white flex flex-col pt-20 px-6 pb-8 overflow-y-auto lg:hidden"
-          >
-            {/* Close button top-right */}
-            <button
-              className="absolute top-5 right-5 p-2 rounded-full text-text hover:bg-primary/10 transition-colors"
-              onClick={() => setIsMobileOpen(false)}
-              aria-label="Close menu"
+        {/* ════════════════════════════════ MOBILE MENU ═══════════════════════ */}
+        <AnimatePresence>
+          {isMobileOpen && (
+            <motion.div
+              id="mobile-menu"
+              key="mobile-menu"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ type: "tween", duration: 0.25, ease: "easeInOut" }}
+              className="absolute top-full left-0 right-0 bg-white flex flex-col px-4 py-4 shadow-xl border-t border-primary/10 lg:hidden overflow-hidden"
+              style={{ minHeight: 0, maxHeight: "none" }}
             >
-              <X size={24} />
-            </button>
+              <nav className="flex flex-col gap-3">
+                {NAV_LINKS.map((link) => {
+                  const active = activeLabel === link.label;
+                  return (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => handleNav(link)}
+                      className={cn(
+                        "flex items-center justify-between px-4 py-3 rounded-xl text-[16px] font-bold transition-all duration-200",
+                        active
+                          ? "bg-primary/10 text-primary"
+                          : "text-text hover:bg-primary/5 hover:text-primary"
+                      )}
+                    >
+                      {link.label}
+                      {active && (
+                        <span className="w-2 h-2 rounded-full bg-primary" />
+                      )}
+                    </Link>
+                  );
+                })}
+              </nav>
 
-            <nav className="flex flex-col gap-2 mt-4">
-              {NAV_LINKS.map((link) => {
-                const active = activeLabel === link.label;
-                return (
-                  <Link
-                    key={link.label}
-                    href={link.hash ? `/#${link.hash}` : link.href}
-                    onClick={(e) => handleNav(link, e)}
-                    className={cn(
-                      "flex items-center justify-between px-4 py-3.5 rounded-xl text-lg font-bold transition-all duration-200",
-                      active
-                        ? "bg-primary/10 text-primary"
-                        : "text-text hover:bg-primary/5 hover:text-primary"
-                    )}
-                  >
-                    {link.label}
-                    {active && (
-                      <span className="w-2 h-2 rounded-full bg-primary" />
-                    )}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            <div className="mt-auto pt-6 border-t border-border">
-              <BookAppointmentButton
-                size="lg"
-                className="w-full"
-                icon={Phone}
-                onClick={() => setIsMobileOpen(false)}
-              >
-                Book Appointment
-              </BookAppointmentButton>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <div className="mt-5 pt-5 border-t border-border">
+                <BookAppointmentButton
+                  size="lg"
+                  className="w-full"
+                  icon={Phone}
+                  onClick={() => {
+                    setIsMobileOpen(false);
+                    document.body.style.overflow = "";
+                  }}
+                >
+                  Book Appointment
+                </BookAppointmentButton>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
     </>
   );
 };

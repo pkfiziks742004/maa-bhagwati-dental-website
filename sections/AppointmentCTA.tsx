@@ -56,6 +56,9 @@ export const AppointmentCTA = () => {
             <img 
               src="/about/smile.png" 
               alt="Patient"
+              width={600}
+              height={600}
+              loading="lazy"
               className="w-full h-full object-contain object-bottom lg:object-right-bottom drop-shadow-2xl"
             />
           </div>

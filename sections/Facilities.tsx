@@ -21,6 +21,7 @@ export const Facilities = () => {
 
   const handleOpen = (index: number) => {
     setSelectedIndex(index);
+    // eslint-disable-next-line react-hooks/immutability
     document.body.style.overflow = "hidden";
   };
 

@@ -23,7 +23,7 @@ export const DentalServices = () => {
           className="mb-16"
         />
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
           {dentalServices.map((service, index) => (
             <ServiceCard
               key={service!.slug}
@@ -60,7 +60,7 @@ export const CosmodentServices = () => {
           className="mb-16"
         />
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
           {cosmodentServices.map((service, index) => (
             <ServiceCard
               key={service!.slug}

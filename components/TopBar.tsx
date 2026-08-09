@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Clock, MapPin, AlertCircle, MessageCircle } from "lucide-react";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 export const TopBar = () => {
   return (
@@ -8,17 +9,17 @@ export const TopBar = () => {
       
       {/* Left: Contact Info */}
       <div className="flex items-center gap-6">
-        <a href="tel:+917906174142" className="flex items-center gap-2 hover:text-primary transition-colors">
+        <a href={`tel:${CONTACT_DETAILS.primaryPhone.replace(/\s+/g, '')}`} className="flex items-center gap-2 hover:text-primary transition-colors">
           <Phone size={14} className="text-primary" />
-          <span>+91 7906174142</span>
+          <span>{CONTACT_DETAILS.primaryPhone}</span>
         </a>
-        <a href="https://wa.me/917906174142" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-green-400 transition-colors">
+        <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-green-400 transition-colors">
           <MessageCircle size={14} className="text-green-400" />
           <span>WhatsApp Us</span>
         </a>
         <div className="flex items-center gap-2 border-l border-white/20 pl-6">
           <Clock size={14} className="text-secondary" />
-          <span>Mon - Sun: 10:00 AM - 8:00 PM</span>
+          <span>{CONTACT_DETAILS.workingHours.weekdays}</span>
         </div>
       </div>
 

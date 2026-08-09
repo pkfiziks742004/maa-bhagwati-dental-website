@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 import { AppointmentHero } from "@/sections/appointment/AppointmentHero";
 import { WhyBookOnline } from "@/sections/appointment/WhyBookOnline";
-import { MultiStepForm } from "@/components/appointment/MultiStepForm";
+
 import { SectionTitle } from "@/components/SectionTitle";
 import { FAQCard } from "@/components/FAQCard";
 import { PatientCarePromise } from "@/sections/about/PatientCarePromise";
@@ -44,7 +44,14 @@ export default function AppointmentPage() {
           {/* Form Section */}
           <section className="py-12 md:py-20 relative">
              <div className="container mx-auto px-4 md:px-6">
-                <MultiStepForm />
+                <div className="max-w-[700px] mx-auto w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-border/50">
+                  <iframe 
+                    src="https://maabhagwatidentalhims.pluscode.in/public/booking?embedded=1" 
+                    className="w-full h-[750px] border-none"
+                    title="Book Appointment"
+                    allowTransparency={true}
+                  />
+                </div>
              </div>
           </section>
 

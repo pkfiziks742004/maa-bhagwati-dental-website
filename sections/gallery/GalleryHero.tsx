@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronRight, Calendar, Camera } from "lucide-react";
-import { PrimaryButton } from "@/components/PrimaryButton";
+import { BookAppointmentButton } from "@/components/BookAppointmentButton";
 import { SecondaryButton } from "@/components/SecondaryButton";
 
 export const GalleryHero = () => {
@@ -52,11 +52,11 @@ export const GalleryHero = () => {
              transition={{ duration: 0.6, delay: 0.3 }}
              className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-             <Link href="/appointment/" className="w-full sm:w-auto">
-               <PrimaryButton size="lg" icon={Calendar} className="w-full">
-                  Book Appointment
-               </PrimaryButton>
-             </Link>
+             <div className="w-full sm:w-auto">
+               <BookAppointmentButton size="lg" icon={Calendar} className="w-full">
+                 Book Appointment
+               </BookAppointmentButton>
+             </div>
              <Link href="#gallery-grid" className="w-full sm:w-auto">
                <SecondaryButton outline size="lg" icon={Camera} className="w-full">
                   View Tour

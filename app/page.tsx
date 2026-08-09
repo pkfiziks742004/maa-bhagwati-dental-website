@@ -19,11 +19,14 @@ import { AboutClinic } from "@/sections/AboutClinic";
 import { WhyChooseUs } from "@/sections/WhyChooseUs";
 import { Doctors } from "@/sections/Doctors";
 import { DentalServices, CosmodentServices } from "@/sections/Services";
-import { Facilities } from "@/sections/Facilities";
-import { Testimonials } from "@/sections/Testimonials";
-import { FAQSection } from "@/sections/FAQSection";
-import { AppointmentCTA } from "@/sections/AppointmentCTA";
-import { ContactSection } from "@/sections/ContactSection";
+import dynamic from "next/dynamic";
+
+const Facilities = dynamic(() => import("@/sections/Facilities").then((mod) => mod.Facilities));
+const Testimonials = dynamic(() => import("@/sections/Testimonials").then((mod) => mod.Testimonials));
+const FAQSection = dynamic(() => import("@/sections/FAQSection").then((mod) => mod.FAQSection));
+const BeforeAfterSection = dynamic(() => import("@/sections/BeforeAfterSection").then((mod) => mod.BeforeAfterSection));
+const AppointmentCTA = dynamic(() => import("@/sections/AppointmentCTA").then((mod) => mod.AppointmentCTA));
+const ContactSection = dynamic(() => import("@/sections/ContactSection").then((mod) => mod.ContactSection));
 
 export default function Home() {
   return (
@@ -58,6 +61,9 @@ export default function Home() {
         
         {/* 11. Technology / Facilities */}
         <Facilities />
+        
+        {/* 12. Before & After */}
+        <BeforeAfterSection />
         
         {/* 13. Testimonials */}
         <Testimonials />

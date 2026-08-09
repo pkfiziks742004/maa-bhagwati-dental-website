@@ -3,6 +3,7 @@
 import { Phone, Calendar } from "lucide-react";
 import { BookAppointmentButton } from "@/components/BookAppointmentButton";
 import Image from "next/image";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 export const ServicesCTA = () => {
   return (
@@ -37,15 +38,15 @@ export const ServicesCTA = () => {
                 Book Appointment
               </BookAppointmentButton>
               
-              <div className="flex items-center gap-4 text-white w-full sm:w-auto">
+              <a href={`tel:${CONTACT_DETAILS.primaryPhone.replace(/\s+/g, '')}`} className="flex items-center gap-4 text-white w-full sm:w-auto hover:opacity-80 transition-opacity">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#57B857] shadow-inner">
                   <Phone size={20} strokeWidth={2.5} />
                 </div>
                 <div className="text-left">
                   <p className="text-white/60 text-[11px] font-bold uppercase tracking-widest mb-0.5">Or Call Us</p>
-                  <p className="font-extrabold text-[15px] tracking-wider">+91 7906174142</p>
+                  <p className="font-extrabold text-[15px] tracking-wider">{CONTACT_DETAILS.primaryPhone}</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 

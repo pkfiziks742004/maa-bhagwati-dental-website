@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useState } from "react";
+import { CONTACT_DETAILS } from "@/constants/contact";
 
 const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
   <svg
@@ -18,7 +19,7 @@ const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
 
 export const FloatingWhatsApp = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "917906174142"; // Real phone number configuration
+  const phoneNumber = CONTACT_DETAILS.whatsapp.replace(/\D/g, ""); // Real phone number configuration
   const message = "Hello Maa Bhagwati Dental Care, I would like to book an appointment.";
 
   const handleWhatsAppClick = () => {

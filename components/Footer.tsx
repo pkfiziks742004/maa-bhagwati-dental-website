@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { CONTACT_DETAILS, BRANCHES } from "@/constants/contact";
 
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -48,27 +49,27 @@ const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://instagram.com/", icon: InstagramIcon, color: "hover:bg-[#E1306C] hover:text-white hover:border-[#E1306C]" },
   { label: "Facebook", href: "https://facebook.com/", icon: FacebookIcon, color: "hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]" },
   { label: "YouTube", href: "https://youtube.com/", icon: YouTubeIcon, color: "hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000]" },
-  { label: "WhatsApp", href: "https://wa.me/917906174142", icon: WhatsAppIcon, color: "hover:bg-[#25D366] hover:text-white hover:border-[#25D366]" },
+  { label: "WhatsApp", href: `https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`, icon: WhatsAppIcon, color: "hover:bg-[#25D366] hover:text-white hover:border-[#25D366]" },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="bg-background-light pt-16 pb-8 border-t border-border">
+    <footer className="bg-[#18212B] pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="relative flex mb-4 h-14 w-[200px]">
-              <Image src="/logo.png" alt="Maa Bhagwati Logo" fill sizes="200px" className="object-contain object-left" />
+            <Link href="/" className="relative flex mb-4 h-14 w-[200px] bg-white rounded-lg p-2 shadow-sm">
+              <Image src="/logo.png" alt="Maa Bhagwati Logo" fill sizes="200px" className="object-contain object-left px-2" />
             </Link>
-            <p className="text-text/70 text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               Premium dental care clinic specializing in advanced laser treatments, cosmetic dentistry, and comprehensive oral health solutions.
             </p>
             <div className="flex gap-3 pt-2">
               {SOCIAL_LINKS.map(({ label, href, icon: Icon, color }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                  className={`w-10 h-10 rounded-full border border-primary/20 bg-primary/10 flex items-center justify-center text-primary transition-all duration-300 ${color}`}>
+                  className={`w-10 h-10 rounded-full border border-slate-600 bg-slate-800 flex items-center justify-center text-slate-300 transition-all duration-300 ${color}`}>
                   <Icon />
                 </a>
               ))}
@@ -77,11 +78,11 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-text">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3">
               {QUICK_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <Link href={href} className="text-text/70 hover:text-primary transition-colors text-sm">{label}</Link>
+                  <Link href={href} className="text-slate-300 hover:text-primary transition-colors text-sm">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -89,11 +90,11 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-text">Our Services</h3>
+            <h3 className="font-bold text-lg mb-6 text-white">Our Services</h3>
             <ul className="space-y-3">
               {SERVICE_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <Link href={href} className="text-text/70 hover:text-primary transition-colors text-sm">{label}</Link>
+                  <Link href={href} className="text-slate-300 hover:text-primary transition-colors text-sm">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -101,25 +102,25 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-text">Contact Info</h3>
+            <h3 className="font-bold text-lg mb-6 text-white">Contact Info</h3>
             <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-text/70">
+              <li className="flex gap-3 text-sm text-slate-300">
                 <MapPin size={20} className="text-primary shrink-0 mt-0.5" />
-                <a href="https://maps.google.com/?q=Purana+Mangroli+Road+Jewar+Gautam+Buddha+Nagar+UP+203135" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  Purana Mangroli Road, Badi Tanki Ke Paas, Jewar, Gautam Buddha Nagar, Uttar Pradesh 203135, India
+                <a href={BRANCHES[0].mapLink} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  {BRANCHES[0].address}
                 </a>
               </li>
-              <li className="flex gap-3 text-sm text-text/70">
+              <li className="flex gap-3 text-sm text-slate-300">
                 <Phone size={20} className="text-primary shrink-0" />
-                <a href="tel:+917906174142" className="hover:text-primary transition-colors">+91 7906174142</a>
+                <a href={`tel:${CONTACT_DETAILS.primaryPhone.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{CONTACT_DETAILS.primaryPhone}</a>
               </li>
-              <li className="flex gap-3 text-sm text-text/70">
+              <li className="flex gap-3 text-sm text-slate-300">
                 <Mail size={20} className="text-primary shrink-0" />
-                <a href="mailto:liptonkaushik11987@gmail.com" className="hover:text-primary transition-colors break-all">liptonkaushik11987@gmail.com</a>
+                <a href={`mailto:${CONTACT_DETAILS.email}`} className="hover:text-primary transition-colors break-all">{CONTACT_DETAILS.email}</a>
               </li>
-              <li className="flex gap-3 text-sm text-text/70">
+              <li className="flex gap-3 text-sm text-slate-300">
                 <Clock size={20} className="text-primary shrink-0" />
-                <span>Mon - Sat: 9:00 AM - 8:00 PM<br />Sun: By Appointment</span>
+                <span>Mon - Sat: {CONTACT_DETAILS.workingHours.weekdays.split('-')[1].trim()} (Open: {CONTACT_DETAILS.workingHours.weekdays.split('-')[0].trim()})<br />Sun: By Appointment</span>
               </li>
             </ul>
           </div>
@@ -127,11 +128,20 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text/60">
-          <p>© {new Date().getFullYear()} Maa Bhagwati Dental Care. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/contact/" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/contact/" className="hover:text-primary transition-colors">Terms of Service</Link>
+        <div className="border-t border-slate-700 pt-8 pb-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400 mb-6">
+            <p>© 2026 Maa Bhagwati Dental Care. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link href="/contact/" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link href="/contact/" className="hover:text-primary transition-colors">Terms of Service</Link>
+            </div>
+          </div>
+          
+          <div className="flex flex-col justify-center items-center gap-3 text-sm text-slate-400">
+            <span>Designed & Developed By — <a href="https://pluscode.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">PlusCode</a></span>
+            <a href="https://pluscode.in/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <img src="/about/pluscode.jpeg" alt="PlusCode" className="h-10 md:h-12 object-contain bg-white rounded px-2 py-1" />
+            </a>
           </div>
         </div>
       </div>

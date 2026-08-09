@@ -27,7 +27,7 @@ export const EmergencyBanner = () => {
           </div>
           
           <div className="shrink-0 w-full md:w-auto">
-            <a href={`tel:${CONTACT_DETAILS.emergencyPhone}`}>
+            <a href={`tel:${CONTACT_DETAILS.emergencyPhone.replace(/\s+/g, '')}`}>
               <button className="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 transition-colors shadow-lg shadow-red-600/20">
                 <Phone size={24} />
                 Call {CONTACT_DETAILS.emergencyPhone}

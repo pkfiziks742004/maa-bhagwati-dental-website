@@ -9,10 +9,12 @@ import { SecondaryButton } from "@/components/SecondaryButton";
 import Image from "next/image";
 import Link from "next/link";
 
+import { CONTACT_DETAILS } from "@/constants/contact";
+
 const HERO_BACKGROUNDS = [
-  "/banner/baner 1.png",
-  "/banner/baner 2.png",
-  "/banner/baner 3.png"
+  "/banner/baner 1.webp",
+  "/banner/baner 2.webp",
+  "/banner/baner 3.webp"
 ];
 
 export const Hero = () => {
@@ -59,7 +61,8 @@ export const Hero = () => {
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover object-[center_30%]"
-                priority={true}
+                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "auto"}
               />
             </motion.div>
           );
@@ -104,7 +107,12 @@ export const Hero = () => {
               <BookAppointmentButton className="w-full sm:w-auto min-w-[180px]" icon={Calendar}>
                 Book Appointment
               </BookAppointmentButton>
-              <SecondaryButton outline className="w-full sm:w-auto bg-white/50 backdrop-blur-sm" icon={PhoneCall}>
+              <SecondaryButton 
+                outline 
+                className="w-full sm:w-auto bg-white/50 backdrop-blur-sm" 
+                icon={PhoneCall}
+                onClick={() => window.location.href = `tel:${CONTACT_DETAILS.primaryPhone.replace(/\s+/g, '')}`}
+              >
                 Call Now
               </SecondaryButton>
             </div>
