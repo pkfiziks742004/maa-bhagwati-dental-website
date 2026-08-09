@@ -11,11 +11,14 @@ import { FAQCard } from "@/components/FAQCard";
 import { PatientCarePromise } from "@/sections/about/PatientCarePromise";
 
 export const metadata: Metadata = {
-  title: "Book an Appointment | Maa Bhagwati Dental Care",
-  description: "Schedule your visit instantly. Choose your preferred doctor, date, and time slot using our secure online appointment booking system.",
+  title: "Book Dental Appointment in Jewar | Maa Bhagwati Dental Care",
+  description: "Schedule your visit instantly at our clinic in Jewar, Greater Noida. Choose your preferred doctor, date, and time slot using our secure online appointment booking system.",
+  alternates: {
+    canonical: "/appointment/",
+  },
   openGraph: {
-    title: "Book an Appointment | Maa Bhagwati Dental Care",
-    description: "Schedule your visit securely online.",
+    title: "Book Dental Appointment in Jewar | Maa Bhagwati Dental Care",
+    description: "Schedule your visit instantly at our clinic in Jewar, Greater Noida. Choose your preferred doctor, date, and time slot using our secure online appointment booking system.",
     type: "website",
   },
 };

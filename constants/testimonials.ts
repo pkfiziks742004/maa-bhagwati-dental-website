@@ -31,7 +31,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
     patientName: "Rahul Sharma",
-    patientPhoto: "https://images.unsplash.com/photo-1598256989800-fea5c5ce870b?q=80&w=400&auto=format&fit=crop",
+    patientPhoto: "/about/smile.png",
     treatment: "Dental Implants",
     category: "Implants",
     rating: 5,
@@ -62,7 +62,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t4",
     patientName: "Anita Desai",
-    patientPhoto: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=400&auto=format&fit=crop",
+    patientPhoto: "/about/smile.png",
     treatment: "Invisalign Braces",
     category: "Braces",
     rating: 5,
@@ -88,7 +88,7 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
     patientName: "Amit Kumar",
     treatment: "Full Mouth Rehabilitation",
     doctorName: "Dr. Lipton Kaushik",
-    thumbnailUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
+    thumbnailUrl: "/Facilities/Consultation%20Room.png",
     videoUrl: "https://www.youtube.com/embed/placeholder1"
   },
   {
@@ -96,7 +96,7 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
     patientName: "Neha Gupta",
     treatment: "Cosmetic Smile Designing",
     doctorName: "Dr. Lipton Kaushik",
-    thumbnailUrl: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?q=80&w=800&auto=format&fit=crop",
+    thumbnailUrl: "/Facilities/Consultation%20Room.png",
     videoUrl: "https://www.youtube.com/embed/placeholder2"
   }
 ];

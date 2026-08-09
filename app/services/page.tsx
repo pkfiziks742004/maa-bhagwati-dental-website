@@ -7,8 +7,16 @@ import { ServicesFeatures } from "@/sections/services/ServicesFeatures";
 import { ServicesCTA } from "@/sections/services/ServicesCTA";
 
 export const metadata: Metadata = {
-  title: "Our Services | Maa Bhagwati Dental Care",
-  description: "Explore our comprehensive range of services including advanced dental care, cosmetic dentistry, skin treatments, and hair transplantation.",
+  title: "Dental Services in Jewar | Maa Bhagwati Dental Care",
+  description: "Explore our comprehensive range of services in Jewar, Greater Noida, including advanced dental care, cosmetic dentistry, skin treatments, and hair transplantation.",
+  alternates: {
+    canonical: "/services/",
+  },
+  openGraph: {
+    title: "Dental Services in Jewar | Maa Bhagwati Dental Care",
+    description: "Explore our comprehensive range of services in Jewar, Greater Noida, including advanced dental care, cosmetic dentistry, skin treatments, and hair transplantation.",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {

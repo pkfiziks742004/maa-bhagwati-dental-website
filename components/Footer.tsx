@@ -28,20 +28,20 @@ const WhatsAppIcon = () => (
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Our Doctors", href: "/about-doctor" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "About Us", href: "/about/" },
+  { label: "Our Doctors", href: "/about-doctor/" },
+  { label: "Gallery", href: "/gallery/" },
+  { label: "Testimonials", href: "/testimonials/" },
+  { label: "Contact Us", href: "/contact/" },
 ];
 
 const SERVICE_LINKS = [
-  { label: "Laser Dentistry", href: "/services/teeth-cleaning" },
-  { label: "Cosmetic Dentistry", href: "/services/uv-teeth-treatment" },
-  { label: "Root Canal Treatment", href: "/services/root-canal-treatment" },
-  { label: "Dental Implants", href: "/services/dental-implants" },
-  { label: "Orthodontics", href: "/services/ortho-braces" },
-  { label: "Teeth Whitening", href: "/services/uv-teeth-treatment" },
+  { label: "Laser Dentistry", href: "/services/teeth-cleaning/" },
+  { label: "Cosmetic Dentistry", href: "/services/uv-teeth-treatment/" },
+  { label: "Root Canal Treatment", href: "/services/root-canal-treatment/" },
+  { label: "Dental Implants", href: "/services/dental-implants/" },
+  { label: "Orthodontics", href: "/services/ortho-braces/" },
+  { label: "Teeth Whitening", href: "/services/uv-teeth-treatment/" },
 ];
 
 const SOCIAL_LINKS = [
@@ -130,8 +130,8 @@ export const Footer = () => {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text/60">
           <p>© {new Date().getFullYear()} Maa Bhagwati Dental Care. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/contact" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/contact" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/contact/" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/contact/" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

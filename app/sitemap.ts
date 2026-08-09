@@ -4,13 +4,13 @@ import { BLOG_POSTS } from '@/constants/blog';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = 'https://www.maabhagwatidental.com';
+const BASE_URL = 'https://mbdentaljewar.in';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static Routes
   const staticRoutes = ['', '/about', '/about-doctor', '/services', '/gallery', '/testimonials', '/faq', '/blog', '/contact', '/appointment'].map(
     (route) => ({
-      url: `${BASE_URL}${route}`,
+      url: `${BASE_URL}${route}${route === '' ? '' : '/'}`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly' as const,
       priority: route === '' ? 1 : 0.8,
@@ -19,15 +19,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic Service Routes
   const serviceRoutes = SERVICES_DATA.map((service) => ({
-    url: `${BASE_URL}/services/${service.slug}`,
+    url: `${BASE_URL}/services/${service.slug}/`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   // Dynamic Blog Routes
   const blogRoutes = BLOG_POSTS.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
+    url: `${BASE_URL}/blog/${post.slug}/`,
     lastModified: new Date(post.publishDate).toISOString(),
     changeFrequency: 'monthly' as const,
     priority: 0.6,

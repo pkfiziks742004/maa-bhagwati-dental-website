@@ -35,7 +35,7 @@ export const DentalServices = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link href="/services">
+          <Link href="/services/">
             <SecondaryButton outline>View All Dental Services <ArrowRight size={16} className="ml-2" /></SecondaryButton>
           </Link>
         </div>
@@ -72,7 +72,7 @@ export const CosmodentServices = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link href="/services">
+          <Link href="/services/">
             <SecondaryButton outline>View All Cosmodent Services <ArrowRight size={16} className="ml-2" /></SecondaryButton>
           </Link>
         </div>

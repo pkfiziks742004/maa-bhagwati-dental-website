@@ -15,11 +15,14 @@ import { ContactFAQ } from "@/sections/contact/ContactFAQ";
 import { AppointmentCTA } from "@/sections/AppointmentCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Maa Bhagwati Dental Care",
-  description: "Get in touch with Maa Bhagwati Dental Care. Find our clinic locations, working hours, emergency contact numbers, and book your appointment easily.",
+  title: "Contact Maa Bhagwati Dental Care | Jewar, Greater Noida",
+  description: "Get in touch with Maa Bhagwati Dental Care. Find our clinic locations in Jewar, working hours, emergency contact numbers, and book your appointment easily.",
+  alternates: {
+    canonical: "/contact/",
+  },
   openGraph: {
-    title: "Contact Maa Bhagwati Dental Care",
-    description: "Find our clinic locations in New Delhi and get in touch with our dental experts.",
+    title: "Contact Maa Bhagwati Dental Care | Jewar, Greater Noida",
+    description: "Find our clinic locations in Jewar, Greater Noida and get in touch with our dental experts.",
     type: "website",
   },
 };
@@ -74,10 +77,10 @@ export default function ContactPage() {
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Dentist",
-      "@id": "https://www.maabhagwatidental.com/#dentist",
+      "@id": "https://mbdentaljewar.in/#dentist",
       "name": "Maa Bhagwati Dental Care & Cosmodent",
-      "url": "https://www.maabhagwatidental.com",
-      "image": "https://www.maabhagwatidental.com/logo.png",
+      "url": "https://mbdentaljewar.in",
+      "image": "https://mbdentaljewar.in/logo.png",
       "telephone": "+91 7906174142",
       "priceRange": "₹₹",
       "currenciesAccepted": "INR",

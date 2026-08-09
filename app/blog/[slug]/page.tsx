@@ -37,6 +37,9 @@ export async function generateMetadata(
       publishedTime: post.publishDate,
       authors: [post.author],
     },
+    alternates: {
+      canonical: `/blog/${post.slug}/`,
+    }
   };
 }
 
@@ -57,7 +60,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
         {/* Article Header */}
         <section className="container mx-auto px-4 max-w-4xl py-12">
           
-          <Link href="/blog" className="inline-flex items-center gap-2 text-primary hover:text-primary-hover font-bold mb-8 transition-colors">
+          <Link href="/blog/" className="inline-flex items-center gap-2 text-primary hover:text-primary-hover font-bold mb-8 transition-colors">
             <ArrowLeft size={16} /> Back to Blog
           </Link>
 
@@ -154,7 +157,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             "headline": post.title,
             "description": post.shortDescription,
             "image": [
-              `https://www.maabhagwatidental.com${post.featuredImage}`
+              `https://mbdentaljewar.in${post.featuredImage}`
             ],
             "datePublished": post.publishDate,
             "author": {

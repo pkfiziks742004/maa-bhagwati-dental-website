@@ -7,11 +7,14 @@ import { NewsletterCTA } from "@/sections/blog/NewsletterCTA";
 import { AppointmentCTA } from "@/sections/AppointmentCTA";
 
 export const metadata: Metadata = {
-  title: "Dental & Health Blog | Maa Bhagwati Dental Care",
-  description: "Read the latest articles on dental care, cosmetic procedures, and oral hygiene written by our expert doctors in New Delhi.",
+  title: "Dental & Health Blog | Maa Bhagwati Dental Care, Jewar",
+  description: "Read the latest articles on dental care, cosmetic procedures, and oral hygiene written by our expert doctors in Jewar, Greater Noida.",
+  alternates: {
+    canonical: "/blog/",
+  },
   openGraph: {
-    title: "Maa Bhagwati Dental Blog",
-    description: "Expert insights into modern dentistry and cosmetology.",
+    title: "Dental & Health Blog | Maa Bhagwati Dental Care, Jewar",
+    description: "Expert insights into modern dentistry and cosmetology from our Jewar specialists.",
     type: "website",
   },
 };

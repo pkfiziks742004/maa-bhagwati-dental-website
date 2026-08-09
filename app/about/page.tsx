@@ -17,11 +17,14 @@ import { PatientCarePromise } from "@/sections/about/PatientCarePromise";
 import { AppointmentCTA } from "@/sections/AppointmentCTA"; // Reusing from Home
 
 export const metadata: Metadata = {
-  title: "About Us | Maa Bhagwati Dental Care",
-  description: "Learn about Maa Bhagwati Dental Care, our mission, advanced technology, expert team, and our commitment to delivering world-class dental & cosmetic treatments.",
+  title: "About Maa Bhagwati Dental Care & Hair Transplant | Jewar",
+  description: "Learn about Maa Bhagwati Dental Care in Jewar, Greater Noida. Discover our mission, advanced European technology, expert team, and commitment to world-class treatment.",
+  alternates: {
+    canonical: "/about/",
+  },
   openGraph: {
-    title: "About Maa Bhagwati Dental Care",
-    description: "Learn about Maa Bhagwati Dental Care, our mission, advanced technology, expert team, and our commitment to delivering world-class dental & cosmetic treatments.",
+    title: "About Maa Bhagwati Dental Care & Hair Transplant | Jewar",
+    description: "Learn about Maa Bhagwati Dental Care in Jewar, Greater Noida. Discover our mission, advanced European technology, expert team, and commitment to world-class treatment.",
     type: "website",
   },
 };

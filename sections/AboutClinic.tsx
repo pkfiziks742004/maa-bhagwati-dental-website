@@ -105,8 +105,10 @@ export const AboutClinic = () => {
               ))}
             </ul>
             
-            <Link href="/about">
-              <PrimaryButton icon={ArrowRight}>Read Our Story</PrimaryButton>
+            <Link href="/about/">
+              <PrimaryButton icon={ArrowRight}>
+                Discover Our Story
+              </PrimaryButton>
             </Link>
           </motion.div>
 

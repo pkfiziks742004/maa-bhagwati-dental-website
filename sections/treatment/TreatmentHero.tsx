@@ -21,7 +21,7 @@ export const TreatmentHero = ({ service }: { service: ServiceData }) => {
             >
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight size={14} />
-              <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
+              <Link href="/services/" className="hover:text-primary transition-colors">Services</Link>
               <ChevronRight size={14} />
               <span className="text-primary">{service.title}</span>
             </motion.nav>

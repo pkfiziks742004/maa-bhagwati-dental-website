@@ -20,7 +20,7 @@ export const ReviewGrid = () => {
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Category Filters */}
-        <div className="flex overflow-x-auto hide-scrollbar gap-2 w-full pb-8 mb-8" style={{ scrollbarWidth: 'none' }}>
+        <div className="flex flex-wrap gap-2 w-full pb-8 mb-8 justify-center md:justify-start">
            {CATEGORIES.map(category => (
              <button
                key={category}
@@ -54,7 +54,7 @@ export const ReviewGrid = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="break-inside-avoid bg-background-light p-8 rounded-[32px] border border-border relative overflow-hidden group hover:shadow-premium transition-all"
+                    className="break-inside-avoid bg-background-light p-8 rounded-[5px] border border-border relative overflow-hidden group hover:shadow-premium transition-all"
                   >
                     <Quote className="absolute top-6 right-6 text-primary/10 rotate-180" size={64} />
                     

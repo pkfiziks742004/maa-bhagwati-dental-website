@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.maabhagwatidental.com"),
+  metadataBase: new URL("https://mbdentaljewar.in"),
   title: {
     default: "Maa Bhagwati Dental Care | Laser & Cosmodent",
     template: "%s | Maa Bhagwati Dental Care",
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Maa Bhagwati Dental Care",
     description: "Premium dental clinic offering advanced laser and cosmodent treatments.",
-    url: "https://www.maabhagwatidental.com",
+    url: "https://mbdentaljewar.in",
     siteName: "Maa Bhagwati Dental Care",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "/gallery/clinic-reception.jpg",
+        url: "/Facilities/Reception%20Area%20Image.png",
         width: 1200,
         height: 630,
         alt: "Maa Bhagwati Dental Care Clinic Reception",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Maa Bhagwati Dental Care",
     description: "Premium dental clinic offering advanced laser and cosmodent treatments.",
     creator: "@mbdentalcare",
-    images: ["/gallery/clinic-reception.jpg"],
+    images: ["/Facilities/Reception%20Area%20Image.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -103,9 +103,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": ["Dentist", "MedicalOrganization", "LocalBusiness"],
               "name": "Maa Bhagwati Dental Care",
-              "image": "https://www.maabhagwatidental.com/gallery/clinic-reception.jpg",
-              "@id": "https://www.maabhagwatidental.com",
-              "url": "https://www.maabhagwatidental.com",
+              "image": "https://mbdentaljewar.in/Facilities/Reception%20Area%20Image.png",
+              "@id": "https://mbdentaljewar.in",
+              "url": "https://mbdentaljewar.in",
               "telephone": "+917906174142",
               "priceRange": "$$",
               "address": {

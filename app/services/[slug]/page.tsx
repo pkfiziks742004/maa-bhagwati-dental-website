@@ -26,15 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${service.title} | Maa Bhagwati Dental Care`,
+    title: `${service.title} in Jewar | Maa Bhagwati Dental Care`,
     description: service.shortDescription,
     openGraph: {
-      title: `${service.title} | Premium Treatment in Clinic`,
+      title: `${service.title} in Jewar | Maa Bhagwati Dental Care`,
       description: service.shortDescription,
       type: "website",
     },
     alternates: {
-      canonical: `/services/${service.slug}`
+      canonical: `/services/${service.slug}/`
     }
   };
 }

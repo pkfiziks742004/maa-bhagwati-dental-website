@@ -1,6 +1,16 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Maa Bhagwati Dental Care & Hair Transplant | Jewar, Greater Noida",
+  description: "Top-rated dental clinic in Jewar, Greater Noida offering advanced laser dentistry, root canals, dental implants, and cosmetic hair transplant services.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
 // Sections
 import { Hero } from "@/sections/Hero";
 import { Statistics } from "@/sections/Statistics";
@@ -10,7 +20,6 @@ import { WhyChooseUs } from "@/sections/WhyChooseUs";
 import { Doctors } from "@/sections/Doctors";
 import { DentalServices, CosmodentServices } from "@/sections/Services";
 import { Facilities } from "@/sections/Facilities";
-import { BeforeAfterGallery } from "@/sections/BeforeAfterGallery";
 import { Testimonials } from "@/sections/Testimonials";
 import { FAQSection } from "@/sections/FAQSection";
 import { AppointmentCTA } from "@/sections/AppointmentCTA";
@@ -49,9 +58,6 @@ export default function Home() {
         
         {/* 11. Technology / Facilities */}
         <Facilities />
-        
-        {/* 12. Before & After Gallery */}
-        <BeforeAfterGallery />
         
         {/* 13. Testimonials */}
         <Testimonials />

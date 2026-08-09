@@ -3,16 +3,18 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { GalleryHero } from "@/sections/gallery/GalleryHero";
 import { GalleryGrid } from "@/sections/gallery/GalleryGrid";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { AppointmentCTA } from "@/sections/AppointmentCTA";
 import { SectionTitle } from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
-  title: "Clinic & Results Gallery | Maa Bhagwati Dental Care",
-  description: "Take a tour of our modern clinic, view our state-of-the-art equipment, and explore real smile transformations and patient testimonials.",
+  title: "Dental Clinic Gallery | Maa Bhagwati Dental Care, Jewar",
+  description: "Take a tour of our modern clinic in Jewar, Greater Noida, view our state-of-the-art equipment, and explore real smile transformations.",
+  alternates: {
+    canonical: "/gallery/",
+  },
   openGraph: {
-    title: "Clinic Tour & Before/After Gallery",
-    description: "Explore the Maa Bhagwati facility and view real patient results.",
+    title: "Dental Clinic Gallery | Maa Bhagwati Dental Care, Jewar",
+    description: "Take a tour of our modern clinic in Jewar, Greater Noida, view our state-of-the-art equipment, and explore real smile transformations.",
     type: "website",
   },
 };
@@ -28,18 +30,6 @@ export default function GalleryPage() {
         
         {/* 2. Interactive Masonry Grid with Filters & Lightbox */}
         <GalleryGrid />
-
-        {/* 3. Featured Before & After Showcase */}
-        <section className="py-24 bg-background-light relative border-t border-border/50">
-           <div className="container mx-auto px-4 md:px-6">
-              <SectionTitle
-                title="Real Results"
-                subtitle="Clinical Transformations"
-                className="mb-16"
-              />
-              <BeforeAfterSlider />
-           </div>
-        </section>
 
         {/* 4. Final CTA */}
         <AppointmentCTA />

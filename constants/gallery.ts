@@ -18,7 +18,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "clinic-1",
     type: "image",
-    url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Reception%20Area%20Image.png",
     title: "Luxury Reception Area",
     description: "Welcome to Maa Bhagwati Dental Care. Our reception is designed for ultimate patient comfort.",
     category: "Clinic Tour",
@@ -27,7 +27,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "clinic-2",
     type: "image",
-    url: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Waiting%20Lounge.png",
     title: "Premium Waiting Lounge",
     description: "Relax in our hygienic and spacious waiting lounge before your consultation.",
     category: "Clinic Tour",
@@ -36,7 +36,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "clinic-3",
     type: "image",
-    url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Treatment%20Room%20Image.png",
     title: "Advanced Treatment Room",
     description: "Equipped with the latest ergonomic dental chairs and sterile environment.",
     category: "Clinic Tour",
@@ -47,7 +47,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "equip-1",
     type: "image",
-    url: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Advanced%20OPG%20Room.png",
     title: "Digital OPG Machine",
     description: "Low-radiation, highly precise panoramic dental imaging for accurate diagnosis.",
     category: "Equipment",
@@ -56,7 +56,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "equip-2",
     type: "image",
-    url: "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Laser%20Treatment%20Cabin.png",
     title: "Soft Tissue Laser",
     description: "Used for painless gum surgeries, root canals, and faster healing.",
     category: "Equipment",
@@ -65,7 +65,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "equip-3",
     type: "image",
-    url: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Sterization%20Area.png",
     title: "Class-B Autoclave",
     description: "Guaranteeing 100% sterilization for every single instrument used.",
     category: "Equipment",
@@ -76,7 +76,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "work-1",
     type: "image",
-    url: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/teatment%20docter.png",
     title: "Implant Surgery",
     description: "Dr. Lipton performing a highly precise dental implant placement.",
     category: "Doctors at Work",
@@ -87,7 +87,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "work-2",
     type: "image",
-    url: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Consultation%20Room.png",
     title: "Patient Consultation",
     description: "Detailed discussion of treatment plans ensuring complete transparency.",
     category: "Doctors at Work",
@@ -99,7 +99,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "smile-1",
     type: "image",
-    url: "https://images.unsplash.com/photo-1598256989800-fea5c5ce870b?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Cosmodent%20Studio.png",
     title: "Complete Smile Makeover",
     description: "A combination of veneers and laser whitening transformed this smile.",
     category: "Patient Smiles",
@@ -109,7 +109,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "smile-2",
     type: "image",
-    url: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Treatment%20Room11.png",
     title: "Orthodontic Correction",
     description: "Perfectly aligned teeth achieved through clear aligners.",
     category: "Patient Smiles",
@@ -120,7 +120,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "smile-3",
     type: "image",
-    url: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Treatment%20Room%20Image%201.png",
     title: "Hair Restoration",
     description: "Natural-looking hairline restored via FUE Hair Transplant.",
     category: "Patient Smiles",
@@ -133,7 +133,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "video-1",
     type: "video",
-    url: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Laser%20Treatment%20Cabin%201.png",
     videoUrl: "https://www.youtube.com/watch?v=placeholder1",
     title: "Full Clinic Walkthrough",
     description: "Take a virtual tour of our state-of-the-art dental and cosmetic facility.",
@@ -143,7 +143,7 @@ export const GALLERY_DATA: GalleryItem[] = [
   {
     id: "video-2",
     type: "video",
-    url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop",
+    url: "/Facilities/Waiting%20Lounge%20Image.png",
     videoUrl: "https://www.youtube.com/watch?v=placeholder2",
     title: "What is Painless Root Canal?",
     description: "Dr. Lipton explains the modern approach to rotary endodontics.",

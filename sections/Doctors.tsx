@@ -44,7 +44,7 @@ export const Doctors = () => {
               </div>
             </div>
 
-            <Link href="/about-doctor">
+            <Link href="/about-doctor/">
               <PrimaryButton icon={ArrowRight}>
                 View Full Profile
               </PrimaryButton>

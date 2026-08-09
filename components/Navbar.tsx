@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { label: "About",        href: "/",               hash: "about" },
   { label: "Cares",        href: "/",               hash: "cares" },
   { label: "Services",     href: "/",               hash: "dental-services" },
-  { label: "About Doctor", href: "/about-doctor",   hash: "" },
+  { label: "About Doctor", href: "/about-doctor/",  hash: "" },
   { label: "Contact",      href: "/",               hash: "contact" },
 ];
 

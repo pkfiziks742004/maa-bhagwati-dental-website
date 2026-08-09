@@ -33,13 +33,13 @@ export const GalleryGrid = () => {
   };
 
   return (
-    <section className="py-12 md:py-24 bg-white relative">
+    <section id="gallery-grid" className="py-12 md:py-24 bg-white relative">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Filters and Search Bar */}
         <div className="bg-background-light p-4 md:p-6 rounded-[32px] border border-border shadow-sm mb-12 flex flex-col lg:flex-row gap-6 items-center justify-between sticky top-[80px] z-30">
           
-          <div className="flex overflow-x-auto hide-scrollbar gap-2 w-full lg:w-auto pb-2 lg:pb-0" style={{ scrollbarWidth: 'none' }}>
+          <div className="flex flex-wrap gap-2 w-full lg:w-auto pb-2 lg:pb-0">
              {CATEGORIES.map(category => (
                <button
                  key={category}
@@ -79,7 +79,7 @@ export const GalleryGrid = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 // Using column-count for true masonry
-                className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+                className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
               >
                 {filteredItems.map((item, index) => (
                   <motion.div
@@ -88,15 +88,16 @@ export const GalleryGrid = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: (index % 10) * 0.05 }}
-                    className="break-inside-avoid relative rounded-[24px] overflow-hidden group cursor-pointer shadow-sm hover:shadow-premium border border-border/50"
+                    className="break-inside-avoid relative rounded-[16px] overflow-hidden group cursor-pointer shadow-sm hover:shadow-premium border border-border/50"
                     onClick={() => openLightbox(item)}
                   >
-                    {/* Placeholder div replicating image aspect ratio depending on type to avoid real image loading issues in this demo */}
                     <div className={`w-full bg-background-light relative ${item.category === 'Patient Smiles' ? 'aspect-[3/4]' : item.type === 'video' ? 'aspect-video' : 'aspect-[4/3]'}`}>
-                      {/* Fake Image Content */}
-                      <div className="absolute inset-0 flex items-center justify-center text-text/20 font-bold bg-primary/5">
-                        {item.title}
-                      </div>
+                      <img 
+                        src={item.url} 
+                        alt={item.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
+                      />
                       
                       {item.type === "video" && (
                          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">

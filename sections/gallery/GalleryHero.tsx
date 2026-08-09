@@ -52,12 +52,16 @@ export const GalleryHero = () => {
              transition={{ duration: 0.6, delay: 0.3 }}
              className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-             <PrimaryButton size="lg" icon={Calendar}>
-                Book Appointment
-             </PrimaryButton>
-             <SecondaryButton outline size="lg" icon={Camera}>
-                View Tour
-             </SecondaryButton>
+             <Link href="/appointment/" className="w-full sm:w-auto">
+               <PrimaryButton size="lg" icon={Calendar} className="w-full">
+                  Book Appointment
+               </PrimaryButton>
+             </Link>
+             <Link href="#gallery-grid" className="w-full sm:w-auto">
+               <SecondaryButton outline size="lg" icon={Camera} className="w-full">
+                  View Tour
+               </SecondaryButton>
+             </Link>
           </motion.div>
         </div>
       </div>

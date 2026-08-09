@@ -9,12 +9,16 @@ import { Phone, Calendar, Star, GraduationCap, Award, ShieldCheck, CheckCircle2 
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dr. Lipton Kaushik | Premium Laser & Cosmodent Expert",
-  description: "Meet Dr. Lipton Kaushik (BDS MIDA), the driving force behind Maa Bhagwati Dental Care. Expert in Laser Dentistry, Advanced Implants, and Cosmodent treatments.",
+  title: "About Our Dentist | Maa Bhagwati Dental Care, Jewar",
+  description: "Meet Dr. Lipton Kaushik (BDS MIDA), the driving force behind Maa Bhagwati Dental Care in Jewar, Greater Noida. Expert in Laser Dentistry, Advanced Implants, and Cosmodent treatments.",
+  alternates: {
+    canonical: "/about-doctor/",
+  },
   openGraph: {
-    title: "Dr. Lipton Kaushik | Maa Bhagwati Dental Care",
-    description: "Expert in Laser Dentistry, Advanced Implants, and Cosmodent treatments.",
+    title: "About Our Dentist | Maa Bhagwati Dental Care, Jewar",
+    description: "Meet Dr. Lipton Kaushik (BDS MIDA), the driving force behind Maa Bhagwati Dental Care in Jewar, Greater Noida. Expert in Laser Dentistry, Advanced Implants, and Cosmodent treatments.",
     images: ["/about/doctor.png"],
+    type: "website",
   }
 };
 
@@ -199,7 +203,7 @@ export default function AboutDoctorPage() {
             "@type": "Physician",
             "name": "Dr. Lipton Kaushik",
             "medicalSpecialty": ["Dentistry", "Cosmetic Dentistry", "Implantology"],
-            "image": "https://www.maabhagwatidental.com/gallery/dr-lipton-kaushik.jpg",
+            "image": "https://mbdentaljewar.in/about/doctor.png",
             "worksFor": {
               "@type": "MedicalOrganization",
               "name": "Maa Bhagwati Dental Care"
