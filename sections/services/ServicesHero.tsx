@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const ServicesHero = () => {
   return (
-    <section className="relative w-full bg-white overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24 min-h-[550px] lg:min-h-[500px] flex items-center">
+    <section className="relative w-full bg-white overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24 min-h-[420px] md:min-h-[500px] flex items-center">
       
       {/* Background Image with Soft Edge Fade (Matching Home Page) */}
       <div 
@@ -27,9 +27,9 @@ export const ServicesHero = () => {
       </div>
 
       {/* Mobile Text Readability Overlay (Matching Home Page) */}
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px] md:bg-transparent md:backdrop-blur-none z-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-white/30 md:bg-transparent z-10 pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           
           {/* Left Text Content */}

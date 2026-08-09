@@ -70,10 +70,6 @@ export const metadata: Metadata = {
     creator: "@mbdentalcare",
     images: ["/Facilities/Reception%20Area%20Image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  }
 };
 
 import Providers from "@/components/Providers";

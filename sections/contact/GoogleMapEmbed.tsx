@@ -7,7 +7,7 @@ import { BRANCHES } from "@/constants/contact";
 export const GoogleMapEmbed = () => {
   // Using a generic New Delhi location iframe for demonstration. 
   // In a real scenario, this would be replaced with the exact Google Maps embed iframe provided by the clinic.
-  const mapIframe = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d112105.15875225672!2d77.12759160533512!3d28.591965684617502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+  const mapIframe = `<iframe src="https://maps.google.com/maps?q=28.121202710567747,77.56360513126319&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 
   return (
     <section className="py-24 bg-white">
@@ -19,7 +19,7 @@ export const GoogleMapEmbed = () => {
               <h2 className="text-3xl font-bold text-text mb-2">Find Us on Google Maps</h2>
               <p className="text-text/70">Navigate to our main branch easily using Google Maps.</p>
             </div>
-            <a href={BRANCHES[0].mapLink} target="_blank" rel="noreferrer">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=28.121202710567747,77.56360513126319" target="_blank" rel="noreferrer">
               <button className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-bold hover:scale-105 transition-transform shadow-md">
                 <Navigation size={18} /> Open in Maps
               </button>
@@ -30,7 +30,7 @@ export const GoogleMapEmbed = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full h-[500px] rounded-[32px] overflow-hidden border border-border shadow-premium bg-background-light relative z-0"
+            className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden border border-border shadow-premium bg-background-light relative z-0"
           >
              {/* Render iframe safely. If we had an actual embed URL string instead of iframe HTML, we could use <iframe src={embedUrl} /> */}
              <div 

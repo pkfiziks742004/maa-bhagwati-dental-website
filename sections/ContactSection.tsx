@@ -78,15 +78,34 @@ export const ContactSection = () => {
           </motion.div>
         </div>
 
-        {/* Map Placeholder */}
+        {/* Map and Directions */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="w-full h-[400px] bg-background-light rounded-[24px] border border-border shadow-soft flex items-center justify-center overflow-hidden relative"
+          className="w-full flex flex-col items-center"
         >
-          <div className="absolute inset-0 flex items-center justify-center text-text/20 font-bold text-2xl">
-             Google Maps Embed Placeholder
+          <div className="w-full flex justify-end mb-4">
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=28.121202710567747,77.56360513126319" 
+              target="_blank" 
+              rel="noreferrer"
+              className="px-6 py-2.5 bg-primary text-white font-bold rounded-lg shadow-md hover:bg-primary/90 transition-colors flex items-center gap-2 text-sm"
+            >
+              <MapPin size={16} /> Get Directions
+            </a>
+          </div>
+          
+          <div className="w-full h-[300px] md:h-[400px] bg-background-light rounded-lg shadow-soft overflow-hidden relative border border-border/50">
+            <iframe 
+              src="https://maps.google.com/maps?q=28.121202710567747,77.56360513126319&z=17&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </motion.div>
       </div>

@@ -32,7 +32,7 @@ export const BRANCHES: Branch[] = [
     reviewsCount: "1,245+",
     phone: "+91 7906174142",
     email: "liptonkaushik11987@gmail.com",
-    mapLink: "https://maps.google.com/?q=Purana+Mangroli+Road+Jewar+Gautam+Buddha+Nagar",
+    mapLink: "https://www.google.com/maps/dir/?api=1&destination=28.121202710567747,77.56360513126319",
     workingHours: "Mon-Sun: 10:00 AM - 08:00 PM",
   },
 ];

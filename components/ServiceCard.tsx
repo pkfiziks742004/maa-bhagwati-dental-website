@@ -91,7 +91,7 @@ export const ServiceCard = ({
       <div className="mt-auto pt-2">
         {slug ? (
           <Link 
-            href={`/services/${slug}`} 
+            href={`/services/${slug}/`} 
             className={`w-full py-2.5 rounded-full border ${themeBorderClass} ${themeColorClass} font-semibold text-[13px] ${themeHoverBgClass} hover:text-white transition-colors flex items-center justify-center gap-2`}
           >
             Learn More <ArrowRight size={14} />
