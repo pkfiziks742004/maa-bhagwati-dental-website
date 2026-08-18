@@ -16,7 +16,7 @@ export const ServicesHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent md:hidden z-10 pointer-events-none" />
         <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" style={{ width: '40%' }} />
         <Image 
-          src="/banner/baner 1.webp"
+          src="/banner/baner-1.webp"
           alt="Dental Chair Setup" 
           fill
           className="object-cover object-[center_right] z-0"

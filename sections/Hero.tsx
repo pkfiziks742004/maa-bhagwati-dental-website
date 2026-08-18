@@ -9,29 +9,21 @@ import Image from "next/image";
 import { CONTACT_DETAILS } from "@/constants/contact";
 
 const HERO_BACKGROUNDS = [
-  "/banner/baner 1.webp",
-  "/banner/baner 2.webp",
-  "/banner/baner 3.webp"
+  "/banner/baner-1.webp",
+  "/banner/baner-2.webp",
+  "/banner/baner-3.webp"
 ];
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [loadSecondaryImages, setLoadSecondaryImages] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    // Delay loading the next images to ensure they don't block initial LCP or main thread
-    const loadTimer = setTimeout(() => {
-      setLoadSecondaryImages(true);
-    }, 3500);
-
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % HERO_BACKGROUNDS.length);
     }, 5000);
     
-    return () => {
-      clearInterval(timer);
-      clearTimeout(loadTimer);
-    };
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -56,7 +48,7 @@ export const Hero = () => {
                 zIndex: isActive ? 10 : 0
               }}
             >
-              {(isLCP || loadSecondaryImages) && (
+              {(isLCP || imagesLoaded || currentImageIndex > 0) && (
                 <picture>
                   <source media="(max-width: 768px)" srcSet={bg.replace('.webp', '-mobile.webp')} type="image/webp" />
                   <img 
@@ -66,6 +58,9 @@ export const Hero = () => {
                     fetchPriority={isLCP ? "high" : "auto"}
                     loading={isLCP ? "eager" : "lazy"}
                     decoding={isLCP ? "async" : "auto"}
+                    onLoad={() => {
+                      if (isLCP) setImagesLoaded(true);
+                    }}
                   />
                 </picture>
               )}
