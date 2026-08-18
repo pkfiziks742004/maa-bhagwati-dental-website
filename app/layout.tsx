@@ -72,6 +72,7 @@ export const metadata: Metadata = {
     creator: "@mbdentalcare",
     images: ["/facilities/Reception%20Area%20Image.webp"],
   },
+  manifest: "/manifest.webmanifest",
 };
 
 import Providers from "@/components/Providers";
@@ -83,12 +84,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
-      <head>
-        {/* Preconnect to external domains if necessary */}
-        <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="preload" as="image" type="image/webp" href="/banner/baner-1-mobile.webp" media="(max-width: 768px)" fetchPriority="high" />
-        <link rel="preload" as="image" type="image/webp" href="/banner/baner-1.webp" media="(min-width: 769px)" fetchPriority="high" />
-      </head>
       <body className="antialiased min-h-screen flex flex-col bg-background text-text selection:bg-primary/20">
         <Providers>
           {children}

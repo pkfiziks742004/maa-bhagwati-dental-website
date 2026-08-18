@@ -1,9 +1,8 @@
-const CACHE_NAME = 'maa-bhagwati-v2';
+const CACHE_NAME = 'maa-bhagwati-v3';
 
 // Assets to precache during installation
 const PRECACHE_ASSETS = [
   '/',
-  '/offline/',
   '/manifest.webmanifest',
   '/icon-192x192.png',
   '/icon-512x512.png',
@@ -11,19 +10,26 @@ const PRECACHE_ASSETS = [
 ];
 
 self.addEventListener('install', (event) => {
+  // Force the waiting service worker to become the active service worker.
+  self.skipWaiting();
+  
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(async (cache) => {
         // Precache critical assets safely
         for (const url of PRECACHE_ASSETS) {
           try {
-            await cache.add(url);
+            const response = await fetch(url);
+            if (response.ok) {
+              await cache.put(url, response);
+            } else {
+              console.warn('Optional cache fetch failed for:', url);
+            }
           } catch (error) {
             console.warn('Optional cache failed for:', url);
           }
         }
       })
-      .then(() => self.skipWaiting())
   );
 });
 
