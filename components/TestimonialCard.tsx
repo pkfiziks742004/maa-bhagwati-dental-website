@@ -30,7 +30,7 @@ export const TestimonialCard = ({ name, role = "Patient", content, rating = 5, d
       </div>
       
       <p className="text-text/80 text-sm leading-relaxed mb-8 relative z-10 italic">
-        "{content}"
+        &quot;{content}&quot;
       </p>
       
       <div className="flex items-center gap-4">

@@ -178,7 +178,7 @@ export const ContactSection = () => {
                 <div className="relative z-10 flex justify-between items-start">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-1">Send us a Message</h3>
-                    <p className="text-white/80 font-medium text-sm">We'll respond shortly.</p>
+                    <p className="text-white/80 font-medium text-sm">We&apos;ll respond shortly.</p>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 flex items-center gap-1.5 shadow-sm">
                     <Sparkles className="w-3 h-3 text-white" />

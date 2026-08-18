@@ -14,7 +14,7 @@ export const Step5Date = () => {
   const [currentMonthDate, setCurrentMonthDate] = useState(today);
 
   // Generate next 14 days for a quick scroll strip, or we can use a full grid.
-  // The prompt asked for a Premium Calendar. We'll do a quick strip + grid.
+  // The prompt asked for a Premium Calendar. We&apos;ll do a quick strip + grid.
   const next14Days = Array.from({ length: 14 }).map((_, i) => addDays(today, i));
 
   return (

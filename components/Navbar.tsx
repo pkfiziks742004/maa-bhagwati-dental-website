@@ -21,8 +21,13 @@ const NAV_LINKS = [
 export const Navbar = () => {
   const [isScrolled,       setIsScrolled]       = useState(false);
   const [isMobileOpen,     setIsMobileOpen]      = useState(false);
-  const [activeLabel,      setActiveLabel]       = useState("Home");
   const pathname = usePathname();
+
+  const match = NAV_LINKS.find((l) => {
+    if (l.href === "/") return pathname === "/";
+    return pathname.startsWith(l.href);
+  });
+  const activeLabel = match ? match.label : "Home";
 
   /* ── Scroll shadow ── */
   useEffect(() => {
@@ -33,12 +38,6 @@ export const Navbar = () => {
 
   /* ── Sync active link with pathname ── */
   useEffect(() => {
-    const match = NAV_LINKS.find((l) => {
-      if (l.href === "/") return pathname === "/";
-      return pathname.startsWith(l.href);
-    });
-    if (match) setActiveLabel(match.label);
-    
     // Safety check: Ensure body scroll is restored when navigating
     document.body.style.overflow = "";
   }, [pathname]);
@@ -46,7 +45,6 @@ export const Navbar = () => {
   /* ── Handle navigation click ── */
   const handleNav = useCallback(
     (link: (typeof NAV_LINKS)[0]) => {
-      setActiveLabel(link.label);
       setIsMobileOpen(false);
       document.body.style.overflow = "";
     },

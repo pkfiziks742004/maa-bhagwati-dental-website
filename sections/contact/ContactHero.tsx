@@ -35,7 +35,7 @@ export const ContactHero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="fluid-h1 font-bold text-text leading-tight mb-6 tracking-tight"
           >
-            We're Here to <span className="text-primary block md:inline">Help You Smile</span>
+            We&apos;re Here to <span className="text-primary block md:inline">Help You Smile</span>
           </motion.h1>
           
           <motion.p 

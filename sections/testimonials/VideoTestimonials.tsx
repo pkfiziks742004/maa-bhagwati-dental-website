@@ -36,7 +36,7 @@ export const VideoTestimonials = () => {
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-text mb-1">{video.patientName}'s Story</h3>
+                <h3 className="text-xl font-bold text-text mb-1">{video.patientName}&apos;s Story</h3>
                 <p className="text-primary font-medium">{video.treatment}</p>
                 <p className="text-sm text-text/60 mt-2">Treated by {video.doctorName}</p>
               </div>

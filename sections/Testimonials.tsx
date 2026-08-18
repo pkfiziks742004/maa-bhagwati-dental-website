@@ -119,7 +119,7 @@ export const Testimonials = () => {
               </div>
 
               <p className="text-text/80 text-sm leading-relaxed italic">
-                "{t.content}"
+                &quot;{t.content}&quot;
               </p>
             </motion.div>
           ))}

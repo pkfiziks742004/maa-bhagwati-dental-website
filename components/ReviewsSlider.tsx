@@ -67,7 +67,7 @@ export const ReviewsSlider = () => {
             </div>
 
             <p className="text-text/80 text-sm leading-relaxed line-clamp-4">
-              "{review.text}"
+              &quot;{review.text}&quot;
             </p>
           </motion.div>
         ))}

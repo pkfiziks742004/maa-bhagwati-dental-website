@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maa Bhagwati Dental Care - Website
 
-## Getting Started
+## 🚀 Deployment Instructions for Hostinger
 
-First, run the development server:
+This project is built using Next.js (App Router) and uses static HTML export, which makes it 100% compatible with Hostinger's Shared Web Hosting!
 
+### 1. The Deployment Pipeline
+We have configured a fully automated GitHub Actions pipeline located in `.github/workflows/hostinger-deploy.yml`. 
+
+- When you push to the **`deploy`** branch, GitHub Actions will automatically:
+  1. Build the Next.js project into static HTML/CSS/JS.
+  2. Push the built output to a special branch called **`hostinger-build`**.
+
+### 2. Hostinger Setup
+You do **not** need Node.js server support on Hostinger. To deploy:
+1. Log into your Hostinger hPanel.
+2. Go to **Websites > Manage > Advanced > Git**.
+3. Connect your GitHub repository.
+4. **CRITICAL STEP:** Select the **`hostinger-build`** branch as your deployment branch. 
+5. Set the deployment directory to your `public_html` root.
+6. Click Deploy. 
+
+Now, every time GitHub Actions finishes building, Hostinger will automatically pull the static files and your website will be live!
+
+### 3. Local Development
+To run this project locally:
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Code Quality
+We have audited this project. Run the following commands to ensure everything is production ready:
+```bash
+npm run lint
+npm run build
+```

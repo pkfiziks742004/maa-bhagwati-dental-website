@@ -62,7 +62,7 @@ export const ReviewGrid = () => {
                       {[...Array(review.rating)].map((_, i) => <Star key={i} size={18} className="fill-yellow-500" />)}
                     </div>
 
-                    <p className="text-text/80 leading-relaxed mb-8 relative z-10">"{review.review}"</p>
+                    <p className="text-text/80 leading-relaxed mb-8 relative z-10">&quot;{review.review}&quot;</p>
                     
                     <div className="flex items-center gap-4 border-t border-border pt-6">
                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 overflow-hidden relative">
