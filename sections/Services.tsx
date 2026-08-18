@@ -1,4 +1,3 @@
-"use client";
 
 import { SectionTitle } from "@/components/SectionTitle";
 import { ServiceCard } from "@/components/ServiceCard";

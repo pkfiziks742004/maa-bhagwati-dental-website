@@ -16,13 +16,15 @@ const HERO_BACKGROUNDS = [
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    setHasHydrated(true);
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % HERO_BACKGROUNDS.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [currentImageIndex]);
+  }, []);
 
   return (
     <section className="relative w-full flex items-center bg-white overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24">
@@ -46,16 +48,18 @@ export const Hero = () => {
                 zIndex: isActive ? 10 : 0
               }}
             >
-              <Image 
-                src={bg}
-                alt={`Maa Bhagwati Clinic ${index + 1}`}
-                fill
-                sizes="(max-width: 768px) 100vw, 60vw"
-                className="object-cover object-[center_30%]"
-                priority={isLCP}
-                fetchPriority={isLCP ? "high" : "auto"}
-                loading={isLCP ? "eager" : "lazy"}
-              />
+              {(isLCP || hasHydrated) && (
+                <Image 
+                  src={bg}
+                  alt={`Maa Bhagwati Clinic ${index + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  className="object-cover object-[center_30%]"
+                  priority={isLCP}
+                  fetchPriority={isLCP ? "high" : "auto"}
+                  loading={isLCP ? "eager" : "lazy"}
+                />
+              )}
             </div>
           );
         })}

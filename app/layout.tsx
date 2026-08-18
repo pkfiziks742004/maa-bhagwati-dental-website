@@ -85,7 +85,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
       <head>
         {/* Preconnect to external domains if necessary */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="preload" as="image" href="/banner/baner%201.webp" fetchPriority="high" />
       </head>
