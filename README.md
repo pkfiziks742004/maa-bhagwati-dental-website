@@ -9,14 +9,14 @@ We have configured a fully automated GitHub Actions pipeline located in `.github
 
 - When you push to the **`main`** branch, GitHub Actions will automatically:
   1. Build the Next.js project into static HTML/CSS/JS.
-  2. Push the built output to a special branch called **`hostinger-build`**.
+  2. Push the built output to a special branch called **`deploy`**.
 
 ### 2. Hostinger Setup
 You do **not** need Node.js server support on Hostinger. To deploy:
 1. Log into your Hostinger hPanel.
 2. Go to **Websites > Manage > Advanced > Git**.
 3. Connect your GitHub repository.
-4. **CRITICAL STEP:** Select the **`hostinger-build`** branch as your deployment branch. 
+4. **CRITICAL STEP:** Select the **`deploy`** branch as your deployment branch. 
 5. Set the deployment directory to your `public_html` root.
 6. Click Deploy. 
 

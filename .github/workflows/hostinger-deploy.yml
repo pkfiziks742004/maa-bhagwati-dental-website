@@ -30,5 +30,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          publish_branch: hostinger-build
+          publish_branch: deploy
           force_orphan: true
