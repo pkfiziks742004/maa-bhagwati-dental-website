@@ -138,11 +138,41 @@ export default function RootLayout({
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                  navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(registration) {
                     console.log('ServiceWorker registration successful');
-                  }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
+                    
+                    // Force check for updates every time
+                    registration.update();
+                    
+                    registration.onupdatefound = () => {
+                      const installingWorker = registration.installing;
+                      if (installingWorker == null) return;
+                      installingWorker.onstatechange = () => {
+                        if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                          console.log('New content is available; please refresh.');
+                        }
+                      };
+                    };
+                  }).catch(function(err) {
+                    console.error('ServiceWorker registration failed: ', err);
                   });
+                  
+                  // Clean up any extra/old registrations if they somehow exist on different scopes
+                  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for(let registration of registrations) {
+                      if (registration.scope !== window.location.origin + '/') {
+                         registration.unregister();
+                      }
+                    }
+                  });
+                });
+                
+                // Ensure page reloads when the new service worker takes over
+                let refreshing;
+                navigator.serviceWorker.addEventListener('controllerchange', function() {
+                  if (refreshing) return;
+                  refreshing = true;
+                  window.location.reload();
                 });
               }
             `
