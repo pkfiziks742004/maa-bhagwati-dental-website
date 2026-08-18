@@ -7,7 +7,7 @@ This project is built using Next.js (App Router) and uses static HTML export, wh
 ### 1. The Deployment Pipeline
 We have configured a fully automated GitHub Actions pipeline located in `.github/workflows/hostinger-deploy.yml`. 
 
-- When you push to the **`deploy`** branch, GitHub Actions will automatically:
+- When you push to the **`main`** branch, GitHub Actions will automatically:
   1. Build the Next.js project into static HTML/CSS/JS.
   2. Push the built output to a special branch called **`hostinger-build`**.
 
