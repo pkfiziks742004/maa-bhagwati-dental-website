@@ -16,15 +16,22 @@ const HERO_BACKGROUNDS = [
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [hasHydrated, setHasHydrated] = useState(false);
+  const [loadSecondaryImages, setLoadSecondaryImages] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line
-    setHasHydrated(true);
+    // Delay loading the next images to ensure they don't block initial LCP or main thread
+    const loadTimer = setTimeout(() => {
+      setLoadSecondaryImages(true);
+    }, 3500);
+
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % HERO_BACKGROUNDS.length);
     }, 5000);
-    return () => clearInterval(timer);
+    
+    return () => {
+      clearInterval(timer);
+      clearTimeout(loadTimer);
+    };
   }, []);
 
   return (
@@ -49,7 +56,7 @@ export const Hero = () => {
                 zIndex: isActive ? 10 : 0
               }}
             >
-              {(isLCP || hasHydrated) && (
+              {(isLCP || loadSecondaryImages) && (
                 <picture>
                   <source media="(max-width: 768px)" srcSet={bg.replace('.webp', '-mobile.webp')} type="image/webp" />
                   <img 
@@ -58,6 +65,7 @@ export const Hero = () => {
                     className="w-full h-full object-cover object-[center_30%]"
                     fetchPriority={isLCP ? "high" : "auto"}
                     loading={isLCP ? "eager" : "lazy"}
+                    decoding={isLCP ? "async" : "auto"}
                   />
                 </picture>
               )}
