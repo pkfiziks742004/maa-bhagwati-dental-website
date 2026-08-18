@@ -19,6 +19,7 @@ export const Hero = () => {
   const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line
     setHasHydrated(true);
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % HERO_BACKGROUNDS.length);
@@ -49,16 +50,16 @@ export const Hero = () => {
               }}
             >
               {(isLCP || hasHydrated) && (
-                <Image 
-                  src={bg}
-                  alt={`Maa Bhagwati Clinic ${index + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                  className="object-cover object-[center_30%]"
-                  priority={isLCP}
-                  fetchPriority={isLCP ? "high" : "auto"}
-                  loading={isLCP ? "eager" : "lazy"}
-                />
+                <picture>
+                  <source media="(max-width: 768px)" srcSet={bg.replace('.webp', '-mobile.webp')} type="image/webp" />
+                  <img 
+                    src={bg}
+                    alt={`Maa Bhagwati Clinic ${index + 1}`}
+                    className="w-full h-full object-cover object-[center_30%]"
+                    fetchPriority={isLCP ? "high" : "auto"}
+                    loading={isLCP ? "eager" : "lazy"}
+                  />
+                </picture>
               )}
             </div>
           );

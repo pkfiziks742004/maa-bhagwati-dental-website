@@ -86,7 +86,8 @@ export default function RootLayout({
       <head>
         {/* Preconnect to external domains if necessary */}
         <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="preload" as="image" href="/banner/baner%201.webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/banner/baner%201-mobile.webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" as="image" href="/banner/baner%201.webp" media="(min-width: 769px)" fetchPriority="high" />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-background text-text selection:bg-primary/20">
         <Providers>
