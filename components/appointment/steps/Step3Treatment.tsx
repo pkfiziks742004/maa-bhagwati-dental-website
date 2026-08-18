@@ -22,7 +22,7 @@ export const Step3Treatment = () => {
       <h3 className="text-xl font-bold text-text mb-4">Choose Treatment</h3>
       
       {availableTreatments.length === 0 ? (
-        <p className="text-text/60">No specific treatments found for this department. Please select 'General Consultation'.</p>
+        <p className="text-text/60">No specific treatments found for this department. Please select &apos;General Consultation&apos;.</p>
       ) : (
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div
