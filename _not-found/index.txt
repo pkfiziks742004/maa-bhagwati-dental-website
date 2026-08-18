@@ -1,0 +1,64 @@
+1:"$Sreact.fragment"
+2:I[11414,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+3:I[39756,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+4:I[37457,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+5:I[52157,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"PreloadChunks"]
+c:I[68027,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"default",1]
+:HL["/_next/static/chunks/0n1oaoocrjrwh.css","style"]
+7:T7bb,
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(registration) {
+                    console.log('ServiceWorker registration successful');
+                    
+                    // Force check for updates every time
+                    registration.update();
+                    
+                    registration.onupdatefound = () => {
+                      const installingWorker = registration.installing;
+                      if (installingWorker == null) return;
+                      installingWorker.onstatechange = () => {
+                        if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                          console.log('New content is available; please refresh.');
+                        }
+                      };
+                    };
+                  }).catch(function(err) {
+                    console.error('ServiceWorker registration failed: ', err);
+                  });
+                  
+                  // Clean up any extra/old registrations if they somehow exist on different scopes
+                  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for(let registration of registrations) {
+                      if (registration.scope !== window.location.origin + '/') {
+                         registration.unregister();
+                      }
+                    }
+                  });
+                });
+                
+                // Ensure page reloads when the new service worker takes over
+                let refreshing;
+                navigator.serviceWorker.addEventListener('controllerchange', function() {
+                  if (refreshing) return;
+                  refreshing = true;
+                  window.location.reload();
+                });
+              }
+            0:{"P":null,"c":["","_not-found",""],"q":"","i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0n1oaoocrjrwh.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/1sf3kh3cuywzl.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0j8q21_2xv_cr.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/14mrh2-p_w84d.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"inter_7b064e0d-module__MOT0tq__variable outfit_de7557ea-module__HvPnFW__variable scroll-smooth","children":["$","body",null,{"className":"antialiased min-h-screen flex flex-col bg-background text-text selection:bg-primary/20","children":[["$","$L2",null,{"children":[["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],[["$","$L5",null,{"moduleIds":["2756692805178828233"]}],"$L6"]]}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":[\"Dentist\",\"MedicalOrganization\",\"LocalBusiness\"],\"name\":\"Maa Bhagwati Dental Care\",\"image\":\"https://mbdentaljewar.in/facilities/Reception%20Area%20Image.webp\",\"@id\":\"https://mbdentaljewar.in\",\"url\":\"https://mbdentaljewar.in\",\"telephone\":\"+91 7906174142\",\"priceRange\":\"$$\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Purana Mangroli Road, Badi Tanki Ke Paas, Jewar\",\"addressLocality\":\"Gautam Buddha Nagar\",\"addressRegion\":\"Uttar Pradesh\",\"postalCode\":\"203135\",\"addressCountry\":\"IN\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":28.591965,\"longitude\":77.127591},\"openingHoursSpecification\":{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\",\"Sunday\"],\"opens\":\"10:00\",\"closes\":\"20:00\"}}"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}]]}]}]]}],{"children":["$L8",{"children":["$L9",{},null,false,null]},null,false,"$@a"]},null,false,null],"$Lb",false]],"m":"$undefined","G":["$c",["$Ld"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"_uj8mLSvHReD4sGemjMsN"}
+e:I[97367,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+f:"$Sreact.suspense"
+12:I[97367,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"ViewportBoundary"]
+14:I[97367,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"MetadataBoundary"]
+8:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+9:["$","$1","c",{"children":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:0:props:children:1:props:children:props:children:0:props:children:0:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:0:props:children:1:props:children:props:children:0:props:children:0:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:f:0:1:0:props:children:1:props:children:props:children:0:props:children:0:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:0:props:children:1:props:children:props:children:0:props:children:0:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],null,["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}]
+11:[]
+a:"$W11"
+b:["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L12",null,{"children":"$L13"}],["$","div",null,{"hidden":true,"children":["$","$L14",null,{"children":["$","$f",null,{"name":"Next.Metadata","children":"$L15"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+d:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0n1oaoocrjrwh.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+16:I[57904,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"FloatingWhatsApp"]
+6:["$","$L16",null,{}]
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#0047AB"}]]
+17:I[27201,["/_next/static/chunks/1sf3kh3cuywzl.js","/_next/static/chunks/0j8q21_2xv_cr.js","/_next/static/chunks/14mrh2-p_w84d.js"],"IconMark"]
+10:null
+15:[["$","title","0",{"children":"Maa Bhagwati Dental Care | Laser & Cosmodent"}],["$","meta","1",{"name":"description","content":"Premium dental clinic offering advanced laser dentistry, dental implants, and cosmetic treatments in New Delhi."}],["$","meta","2",{"name":"author","content":"Maa Bhagwati Dental Care"}],["$","link","3",{"rel":"manifest","href":"/manifest.webmanifest","crossOrigin":"$undefined"}],["$","meta","4",{"name":"keywords","content":"Best Dentist in New Delhi,Laser Root Canal,Dental Implants Delhi,Hair Transplant,Cosmodent,Braces"}],["$","meta","5",{"name":"creator","content":"Maa Bhagwati Dental Care"}],["$","meta","6",{"name":"publisher","content":"Maa Bhagwati Dental Care"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","9",{"rel":"canonical","href":"https://mbdentaljewar.in/"}],["$","meta","10",{"property":"og:title","content":"Maa Bhagwati Dental Care"}],["$","meta","11",{"property":"og:description","content":"Premium dental clinic offering advanced laser and cosmodent treatments."}],["$","meta","12",{"property":"og:url","content":"https://mbdentaljewar.in/"}],["$","meta","13",{"property":"og:site_name","content":"Maa Bhagwati Dental Care"}],["$","meta","14",{"property":"og:locale","content":"en_IN"}],["$","meta","15",{"property":"og:image","content":"https://mbdentaljewar.in/facilities/Reception%20Area%20Image.webp"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"Maa Bhagwati Dental Care Clinic Reception"}],["$","meta","19",{"property":"og:type","content":"website"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:creator","content":"@mbdentalcare"}],["$","meta","22",{"name":"twitter:title","content":"Maa Bhagwati Dental Care"}],["$","meta","23",{"name":"twitter:description","content":"Premium dental clinic offering advanced laser and cosmodent treatments."}],["$","meta","24",{"name":"twitter:image","content":"https://mbdentaljewar.in/facilities/Reception%20Area%20Image.webp"}],["$","link","25",{"rel":"icon","href":"/icon.png?icon.1eb6g2hplh78_.png","sizes":"462x462","type":"image/png"}],["$","link","26",{"rel":"apple-touch-icon","href":"/apple-icon.png?apple-icon.1eb6g2hplh78_.png","sizes":"462x462","type":"image/png"}],["$","$L17","27",{}]]
