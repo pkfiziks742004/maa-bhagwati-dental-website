@@ -84,7 +84,7 @@ export const Navbar = () => {
             aria-label="Maa Bhagwati Home"
           >
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Maa Bhagwati Dental Care"
               fill
               sizes="(max-width: 640px) 140px, (max-width: 768px) 170px, 200px"

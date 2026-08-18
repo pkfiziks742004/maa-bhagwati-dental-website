@@ -81,7 +81,7 @@ export default function ContactPage() {
       "@id": "https://mbdentaljewar.in/#dentist",
       "name": "Maa Bhagwati Dental Care & Cosmodent",
       "url": "https://mbdentaljewar.in",
-      "image": "https://mbdentaljewar.in/logo.png",
+      "image": "https://mbdentaljewar.in/logo.webp",
       "telephone": CONTACT_DETAILS.primaryPhone,
       "priceRange": "₹₹",
       "currenciesAccepted": "INR",

@@ -55,7 +55,7 @@ export const CategoryCards = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent z-10" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10" />
               <Image 
-                src="/about/Dental Care.png" 
+                src="/about/Dental Care.webp" 
                 alt="Dental Clinic" 
                 width={800}
                 height={800}
@@ -178,7 +178,7 @@ export const CategoryCards = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent z-10" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10" />
               <Image 
-                src="/about/Cosmodent.png" 
+                src="/about/Cosmodent.webp" 
                 alt="Cosmodent Treatment" 
                 width={800}
                 height={800}

@@ -55,7 +55,7 @@ export const AppointmentCTA = () => {
           {/* Right Side: Image (Pop-out effect) */}
           <div className="relative md:absolute right-0 bottom-0 w-[85%] md:w-[60%] lg:w-[50%] h-[300px] md:h-[120%] lg:h-[135%] pointer-events-none z-20 flex items-end justify-end self-center md:self-auto mt-8 md:mt-0">
             <Image 
-              src="/about/smile.png" 
+              src="/about/smile.webp" 
               alt="Patient"
               width={600}
               height={600}

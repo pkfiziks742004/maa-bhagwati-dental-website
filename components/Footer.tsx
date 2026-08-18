@@ -61,7 +61,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="relative flex mb-4 h-14 w-[200px] bg-white rounded-lg p-2 shadow-sm">
-              <Image src="/logo.png" alt="Maa Bhagwati Logo" fill sizes="200px" className="object-contain object-left px-2" />
+              <Image src="/logo.webp" alt="Maa Bhagwati Logo" fill sizes="200px" className="object-contain object-left px-2" />
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed">
               Premium dental care clinic specializing in advanced laser treatments, cosmetic dentistry, and comprehensive oral health solutions.

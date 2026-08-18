@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/facilities/Reception%20Area%20Image.png",
+        url: "/facilities/Reception%20Area%20Image.webp",
         width: 1200,
         height: 630,
         alt: "Maa Bhagwati Dental Care Clinic Reception",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Maa Bhagwati Dental Care",
     description: "Premium dental clinic offering advanced laser and cosmodent treatments.",
     creator: "@mbdentalcare",
-    images: ["/facilities/Reception%20Area%20Image.png"],
+    images: ["/facilities/Reception%20Area%20Image.webp"],
   },
 };
 
@@ -87,6 +87,7 @@ export default function RootLayout({
         {/* Preconnect to external domains if necessary */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="preload" as="image" href="/banner/baner%201.webp" fetchPriority="high" />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-background text-text selection:bg-primary/20">
         <Providers>
@@ -102,7 +103,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": ["Dentist", "MedicalOrganization", "LocalBusiness"],
               "name": "Maa Bhagwati Dental Care",
-              "image": "https://mbdentaljewar.in/facilities/Reception%20Area%20Image.png",
+              "image": "https://mbdentaljewar.in/facilities/Reception%20Area%20Image.webp",
               "@id": "https://mbdentaljewar.in",
               "url": "https://mbdentaljewar.in",
               "telephone": CONTACT_DETAILS.primaryPhone,

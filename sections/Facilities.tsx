@@ -8,12 +8,12 @@ import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const FACILITIES = [
-  { name: "Reception Area", image: "/facilities/Reception Area Image.png" },
-  { name: "Treatment Doctor", image: "/facilities/teatment docter.png" },
-  { name: "Waiting Lounge", image: "/facilities/Waiting Lounge Image.png" },
-  { name: "Treatment Room", image: "/facilities/Treatment Room11.png" },
-  { name: "Laser Treatment Cabin", image: "/facilities/Laser Treatment Cabin 1.png" },
-  { name: "Consultation Room", image: "/facilities/Consultation Room.png" },
+  { name: "Reception Area", image: "/facilities/Reception Area Image.webp" },
+  { name: "Treatment Doctor", image: "/facilities/teatment docter.webp" },
+  { name: "Waiting Lounge", image: "/facilities/Waiting Lounge Image.webp" },
+  { name: "Treatment Room", image: "/facilities/Treatment Room11.webp" },
+  { name: "Laser Treatment Cabin", image: "/facilities/Laser Treatment Cabin 1.webp" },
+  { name: "Consultation Room", image: "/facilities/Consultation Room.webp" },
 ];
 
 export const Facilities = () => {

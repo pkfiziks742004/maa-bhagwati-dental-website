@@ -16,7 +16,7 @@ export const AboutHero = () => {
         {/* Blur overlay */}
         <div className="absolute inset-0 backdrop-blur-[3px] z-[5]" />
         <Image
-          src="/facilities/Cosmodent Studio.png"
+          src="/facilities/Cosmodent Studio.webp"
           alt="Maa Bhagwati Dental Clinic"
           fill
           className="object-cover"

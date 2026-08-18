@@ -9,9 +9,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const CLINIC_IMAGES = [
-  "/banner/baner 1.png",
-  "/banner/baner 2.png",
-  "/banner/baner 3.png"
+  "/banner/baner 1.webp",
+  "/banner/baner 2.webp",
+  "/banner/baner 3.webp"
 ];
 
 export const AboutClinic = () => {

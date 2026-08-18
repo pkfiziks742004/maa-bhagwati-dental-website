@@ -53,7 +53,7 @@ export const ServicesCTA = () => {
           {/* Right Image */}
           <div className="relative w-full lg:w-[45%] xl:w-[40%] min-h-[350px] lg:min-h-full flex items-end justify-center">
             <Image 
-              src="/services/servics apor.png" 
+              src="/services/servics apor.webp" 
               alt="Smiling Family" 
               width={600}
               height={500}

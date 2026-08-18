@@ -31,10 +31,10 @@ export const ClinicIntro = () => {
               className="space-y-4"
             >
               <div className="bg-background-light rounded-[24px] overflow-hidden aspect-[4/5] relative border border-border shadow-soft">
-                <Image src="/facilities/Reception Area Image.png" alt="Reception Area" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                <Image src="/facilities/Reception Area Image.webp" alt="Reception Area" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
               <div className="bg-background-light rounded-[24px] overflow-hidden aspect-square relative border border-border shadow-soft">
-                <Image src="/facilities/Waiting Lounge Image.png" alt="Waiting Lounge" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                <Image src="/facilities/Waiting Lounge Image.webp" alt="Waiting Lounge" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
             </motion.div>
             <motion.div 
@@ -45,10 +45,10 @@ export const ClinicIntro = () => {
               className="space-y-4 pt-8"
             >
               <div className="bg-background-light rounded-[24px] overflow-hidden aspect-square relative border border-border shadow-soft">
-                <Image src="/facilities/Treatment Room Image.png" alt="Treatment Room" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                <Image src="/facilities/Treatment Room Image.webp" alt="Treatment Room" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
               <div className="bg-background-light rounded-[24px] overflow-hidden aspect-[4/5] relative border border-border shadow-soft">
-                <Image src="/facilities/Advanced OPG Room.png" alt="Digital X-Ray Room" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                <Image src="/facilities/Advanced OPG Room.webp" alt="Digital X-Ray Room" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
             </motion.div>
           </div>

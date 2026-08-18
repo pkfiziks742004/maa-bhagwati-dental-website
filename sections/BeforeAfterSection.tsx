@@ -8,20 +8,20 @@ const BEFORE_AFTER_DATA = [
   {
     id: 1,
     title: "Smile Designing",
-    beforeImage: "/about/Smile_Designing_Before.png", 
-    afterImage: "/about/Smile_Designing_After.png",
+    beforeImage: "/about/Smile_Designing_Before.webp", 
+    afterImage: "/about/Smile_Designing_After.webp",
   },
   {
     id: 2,
     title: "Dental Implants",
-    beforeImage: "/about/Dental_Implant_Before.png", 
-    afterImage: "/about/Dental_Implant_After.png",
+    beforeImage: "/about/Dental_Implant_Before.webp", 
+    afterImage: "/about/Dental_Implant_After.webp",
   },
   {
     id: 3,
     title: "Laser Dentistry",
-    beforeImage: "/about/Laser_Dentistry_Before.png", 
-    afterImage: "/about/Laser_Dentistry_After.png",
+    beforeImage: "/about/Laser_Dentistry_Before.webp", 
+    afterImage: "/about/Laser_Dentistry_After.webp",
   }
 ];
 

@@ -31,7 +31,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
     patientName: "Rahul Sharma",
-    patientPhoto: "/about/smile.png",
+    patientPhoto: "/about/smile.webp",
     treatment: "Dental Implants",
     category: "Implants",
     rating: 5,
@@ -62,7 +62,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t4",
     patientName: "Anita Desai",
-    patientPhoto: "/about/smile.png",
+    patientPhoto: "/about/smile.webp",
     treatment: "Invisalign Braces",
     category: "Braces",
     rating: 5,
@@ -88,7 +88,7 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
     patientName: "Amit Kumar",
     treatment: "Full Mouth Rehabilitation",
     doctorName: "Dr. Lipton Kaushik",
-    thumbnailUrl: "/facilities/Consultation%20Room.png",
+    thumbnailUrl: "/facilities/Consultation%20Room.webp",
     videoUrl: "https://www.youtube.com/embed/placeholder1"
   },
   {
@@ -96,7 +96,7 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
     patientName: "Neha Gupta",
     treatment: "Cosmetic Smile Designing",
     doctorName: "Dr. Lipton Kaushik",
-    thumbnailUrl: "/facilities/Consultation%20Room.png",
+    thumbnailUrl: "/facilities/Consultation%20Room.webp",
     videoUrl: "https://www.youtube.com/embed/placeholder2"
   }
 ];
