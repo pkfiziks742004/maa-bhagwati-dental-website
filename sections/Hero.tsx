@@ -1,13 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, PhoneCall, MessageCircle, Star, ShieldCheck, Zap } from "lucide-react";
-import { PrimaryButton } from "@/components/PrimaryButton";
+import { Calendar, PhoneCall, ShieldCheck, Zap } from "lucide-react";
 import { BookAppointmentButton } from "@/components/BookAppointmentButton";
 import { SecondaryButton } from "@/components/SecondaryButton";
 import Image from "next/image";
-import Link from "next/link";
 
 import { CONTACT_DETAILS } from "@/constants/contact";
 
@@ -19,11 +16,9 @@ const HERO_BACKGROUNDS = [
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [prevImageIndex, setPrevImageIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setPrevImageIndex(currentImageIndex);
       setCurrentImageIndex((prev) => (prev + 1) % HERO_BACKGROUNDS.length);
     }, 5000);
     return () => clearInterval(timer);
@@ -40,20 +35,16 @@ export const Hero = () => {
       >
         {HERO_BACKGROUNDS.map((bg, index) => {
           const isActive = currentImageIndex === index;
-          const isPrev = prevImageIndex === index;
-          
+          // Avoid eager loading of non-first images
+          const isLCP = index === 0;
           return (
-            <motion.div
+            <div
               key={bg}
-              initial={false}
-              animate={{ 
-                opacity: isActive ? 1 : (isPrev ? 1 : 0)
-              }}
+              className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
               style={{
-                zIndex: isActive ? 10 : (isPrev ? 5 : 0)
+                opacity: isActive ? 1 : 0,
+                zIndex: isActive ? 10 : 0
               }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="absolute inset-0"
             >
               <Image 
                 src={bg}
@@ -61,49 +52,43 @@ export const Hero = () => {
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover object-[center_30%]"
-                priority={index === 0}
-                fetchPriority={index === 0 ? "high" : "auto"}
+                priority={isLCP}
+                fetchPriority={isLCP ? "high" : "auto"}
+                loading={isLCP ? "eager" : "lazy"}
               />
-            </motion.div>
+            </div>
           );
         })}
       </div>
 
       <div className="absolute inset-0 bg-white/60 backdrop-blur-[4px] md:bg-transparent md:backdrop-blur-none z-20 pointer-events-none" />
 
-      {/* 4. Content */}
+      {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-30 flex flex-col">
         <div className="max-w-2xl w-full">
           
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <div className="animate-fade-in-up">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-md text-primary font-bold text-xs uppercase tracking-widest mb-8 border border-primary/20 shadow-sm"
+            <div
+              className="inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-md text-primary font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-6 md:mb-8 border border-primary/20 shadow-sm"
             >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(87,184,87,0.8)]" />
-              Advanced Laser & Cosmodent Center
-            </motion.div>
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(87,184,87,0.8)] flex-shrink-0" />
+              <span className="truncate">Advanced Laser & Cosmodent Center</span>
+            </div>
             
             {/* Headline */}
-            <h1 className="fluid-h1 font-extrabold text-text mb-5 tracking-tight">
+            <h1 className="fluid-h1 font-extrabold text-text mb-4 tracking-tight">
               Premium Dental & <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Cosmetic Care.</span>
             </h1>
             
             {/* Description */}
-            <p className="text-text/70 text-base md:text-lg leading-relaxed mb-8 max-w-xl pr-4">
+            <p className="fluid-p text-text/70 mb-6 md:mb-8 max-w-xl pr-2 md:pr-4">
               Experience world-class, painless treatments with state-of-the-art laser technology and expert specialists led by Dr. Lipton Kaushik.
             </p>
             
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 mb-8">
+            <div className="flex flex-col sm:flex-row items-center gap-3 mb-6 md:mb-8 w-full sm:w-auto">
               <BookAppointmentButton className="w-full sm:w-auto min-w-[180px]" icon={Calendar}>
                 Book Appointment
               </BookAppointmentButton>
@@ -118,15 +103,15 @@ export const Hero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-4 text-sm font-semibold text-text/70">
-              <div className="flex items-center gap-2 bg-white/60 backdrop-blur px-4 py-2 rounded-full border border-border/50 shadow-sm">
-                <ShieldCheck size={18} className="text-primary" /> Same Day Consultation
+            <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm font-semibold text-text/70">
+              <div className="flex items-center gap-2 bg-white/60 backdrop-blur px-3 md:px-4 py-2 rounded-full border border-border/50 shadow-sm">
+                <ShieldCheck size={16} className="text-primary flex-shrink-0" /> <span className="whitespace-nowrap">Same Day Consultation</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/60 backdrop-blur px-4 py-2 rounded-full border border-border/50 shadow-sm">
-                <Zap size={18} className="text-secondary" /> Laser Dentistry
+              <div className="flex items-center gap-2 bg-white/60 backdrop-blur px-3 md:px-4 py-2 rounded-full border border-border/50 shadow-sm">
+                <Zap size={16} className="text-secondary flex-shrink-0" /> <span className="whitespace-nowrap">Laser Dentistry</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

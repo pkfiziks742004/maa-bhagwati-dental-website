@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import dynamic from "next/dynamic";
+const FloatingWhatsApp = dynamic(() => import("@/components/FloatingWhatsApp").then(mod => mod.FloatingWhatsApp));
 import { CONTACT_DETAILS } from "@/constants/contact";
 
 const inter = Inter({

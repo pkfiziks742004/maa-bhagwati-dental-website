@@ -13,13 +13,16 @@ export const metadata: Metadata = {
 
 // Sections
 import { Hero } from "@/sections/Hero";
-import { Statistics } from "@/sections/Statistics";
-import { CategoryCards } from "@/sections/CategoryCards";
-import { AboutClinic } from "@/sections/AboutClinic";
-import { WhyChooseUs } from "@/sections/WhyChooseUs";
-import { Doctors } from "@/sections/Doctors";
-import { DentalServices, CosmodentServices } from "@/sections/Services";
 import dynamic from "next/dynamic";
+
+const Statistics = dynamic(() => import("@/sections/Statistics").then((mod) => mod.Statistics));
+const CategoryCards = dynamic(() => import("@/sections/CategoryCards").then((mod) => mod.CategoryCards));
+const AboutClinic = dynamic(() => import("@/sections/AboutClinic").then((mod) => mod.AboutClinic));
+const WhyChooseUs = dynamic(() => import("@/sections/WhyChooseUs").then((mod) => mod.WhyChooseUs));
+const Doctors = dynamic(() => import("@/sections/Doctors").then((mod) => mod.Doctors));
+
+const DentalServices = dynamic(() => import("@/sections/Services").then((mod) => mod.DentalServices));
+const CosmodentServices = dynamic(() => import("@/sections/Services").then((mod) => mod.CosmodentServices));
 
 const Facilities = dynamic(() => import("@/sections/Facilities").then((mod) => mod.Facilities));
 const Testimonials = dynamic(() => import("@/sections/Testimonials").then((mod) => mod.Testimonials));
