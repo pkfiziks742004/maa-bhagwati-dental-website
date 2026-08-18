@@ -140,7 +140,7 @@ export const Footer = () => {
           <div className="flex flex-col justify-center items-center gap-3 text-sm text-slate-400">
             <span>Designed & Developed By — <a href="https://pluscode.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">PlusCode</a></span>
             <a href="https://pluscode.in/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-              <img src="/about/pluscode.jpeg" alt="PlusCode" className="h-10 md:h-12 object-contain bg-white rounded px-2 py-1" />
+              <Image src="/about/pluscode.jpeg" alt="PlusCode" width={120} height={48} className="h-10 md:h-12 w-auto object-contain bg-white rounded px-2 py-1" />
             </a>
           </div>
         </div>

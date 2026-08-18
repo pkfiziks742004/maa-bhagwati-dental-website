@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Our Dentist | Maa Bhagwati Dental Care, Jewar",
     description: "Meet Dr. Lipton Kaushik (BDS MIDA), the driving force behind Maa Bhagwati Dental Care in Jewar, Greater Noida. Expert in Laser Dentistry, Advanced Implants, and Cosmodent treatments.",
-    images: ["/about/doctor.png"],
+    images: ["/about/doctor.jpeg"],
     type: "website",
   }
 };
@@ -44,7 +44,7 @@ export default function AboutDoctorPage() {
               {/* Image Container */}
               <div className="relative z-10 w-full aspect-[4/5] rounded-[40px] overflow-hidden shadow-lg bg-gray-100">
                 <Image
-                  src="/about/doctor.png"
+                  src="/about/doctor.jpeg"
                   alt="Dr. Lipton Kaushik"
                   fill
                   className="object-cover object-top"
@@ -203,7 +203,7 @@ export default function AboutDoctorPage() {
             "@type": "Physician",
             "name": "Dr. Lipton Kaushik",
             "medicalSpecialty": ["Dentistry", "Cosmetic Dentistry", "Implantology"],
-            "image": "https://mbdentaljewar.in/about/doctor.png",
+            "image": "https://mbdentaljewar.in/about/doctor.jpeg",
             "worksFor": {
               "@type": "MedicalOrganization",
               "name": "Maa Bhagwati Dental Care"

@@ -10,14 +10,18 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
-    theme_color: '#0047AB',
+    theme_color: '#148C87',
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
+        src: '/icon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
       },
-      // In a real production scenario, you would generate 192x192 and 512x512 PNGs and place them in public/
+      {
+        src: '/icon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
     ],
   };
 }

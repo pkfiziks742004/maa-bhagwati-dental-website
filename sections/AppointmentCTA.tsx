@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { BookAppointmentButton } from "@/components/BookAppointmentButton";
+import Image from "next/image";
 
 export const AppointmentCTA = () => {
   return (
@@ -53,12 +54,11 @@ export const AppointmentCTA = () => {
 
           {/* Right Side: Image (Pop-out effect) */}
           <div className="relative md:absolute right-0 bottom-0 w-[85%] md:w-[60%] lg:w-[50%] h-[300px] md:h-[120%] lg:h-[135%] pointer-events-none z-20 flex items-end justify-end self-center md:self-auto mt-8 md:mt-0">
-            <img 
+            <Image 
               src="/about/smile.png" 
               alt="Patient"
               width={600}
               height={600}
-              loading="lazy"
               className="w-full h-full object-contain object-bottom lg:object-right-bottom drop-shadow-2xl"
             />
           </div>

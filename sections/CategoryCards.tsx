@@ -54,13 +54,12 @@ export const CategoryCards = () => {
             <div className="absolute top-0 right-0 w-3/4 h-[85%] z-0 pointer-events-none">
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent z-10" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10" />
-              <img 
+              <Image 
                 src="/about/Dental Care.png" 
                 alt="Dental Clinic" 
                 width={800}
                 height={800}
                 className="w-full h-full object-cover object-[center_right] opacity-90"
-                loading="lazy"
               />
             </div>
 
@@ -178,13 +177,12 @@ export const CategoryCards = () => {
             <div className="absolute top-0 right-0 w-3/4 h-[85%] z-0 pointer-events-none">
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent z-10" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10" />
-              <img 
+              <Image 
                 src="/about/Cosmodent.png" 
                 alt="Cosmodent Treatment" 
                 width={800}
                 height={800}
                 className="w-full h-full object-cover object-[center_right] opacity-90"
-                loading="lazy"
               />
             </div>
 

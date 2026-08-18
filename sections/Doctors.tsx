@@ -61,7 +61,7 @@ export const Doctors = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-[32px] transform rotate-3" />
             <div className="relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-[32px] overflow-hidden shadow-premium bg-background-light">
               <Image
-                src="/about/doctor.png"
+                src="/about/doctor.jpeg"
                 alt="Dr. Lipton Kaushik"
                 fill
                 className="object-cover"
