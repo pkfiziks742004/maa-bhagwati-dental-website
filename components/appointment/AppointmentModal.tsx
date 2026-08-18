@@ -211,12 +211,14 @@ export function AppointmentModal() {
                     {/* Name & Phone */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
-                        <label className="text-[13px] font-bold text-[#1b365d]">Full Name</label>
+                        <label htmlFor="modal_full_name" className="text-[13px] font-bold text-[#1b365d]">Full Name</label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                             <User size={18} />
                           </div>
                           <input 
+                            id="modal_full_name"
+                            autoComplete="name"
                             required 
                             name="full_name"
                             type="text" 
@@ -226,12 +228,14 @@ export function AppointmentModal() {
                         </div>
                       </div>
                       <div className="space-y-1.5">
-                        <label className="text-[13px] font-bold text-[#1b365d]">Phone Number</label>
+                        <label htmlFor="modal_mobile" className="text-[13px] font-bold text-[#1b365d]">Phone Number</label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                             <Phone size={18} />
                           </div>
                           <input 
+                            id="modal_mobile"
+                            autoComplete="tel"
                             required 
                             name="mobile"
                             type="tel" 
@@ -276,12 +280,13 @@ export function AppointmentModal() {
                     {/* Date & Time */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
-                        <label className="text-[13px] font-bold text-[#1b365d]">Preferred Date</label>
+                        <label htmlFor="modal_date" className="text-[13px] font-bold text-[#1b365d]">Preferred Date</label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                             <Calendar size={18} />
                           </div>
                           <input 
+                            id="modal_date"
                             required 
                             name="preferred_date"
                             type="date" 

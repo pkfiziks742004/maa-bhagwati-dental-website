@@ -44,7 +44,10 @@ export const NewsletterCTA = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto relative z-10">
+              <label htmlFor="newsletter_email" className="sr-only">Email Address</label>
               <input 
+                id="newsletter_email"
+                autoComplete="email"
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

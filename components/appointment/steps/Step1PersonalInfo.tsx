@@ -11,8 +11,10 @@ export const Step1PersonalInfo = () => {
       
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-text mb-2">Full Name <span className="text-red-500">*</span></label>
+          <label htmlFor="step1_name" className="block text-sm font-medium text-text mb-2">Full Name <span className="text-red-500">*</span></label>
           <input
+            id="step1_name"
+            autoComplete="name"
             {...register("name")}
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             placeholder="John Doe"
@@ -21,8 +23,10 @@ export const Step1PersonalInfo = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-text mb-2">Mobile Number <span className="text-red-500">*</span></label>
+          <label htmlFor="step1_mobile" className="block text-sm font-medium text-text mb-2">Mobile Number <span className="text-red-500">*</span></label>
           <input
+            id="step1_mobile"
+            autoComplete="tel"
             {...register("mobile")}
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             placeholder={CONTACT_DETAILS.primaryPhone.replace(/\D/g, "").slice(-10)}
@@ -33,8 +37,10 @@ export const Step1PersonalInfo = () => {
 
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-text mb-2">Email (Optional)</label>
+          <label htmlFor="step1_email" className="block text-sm font-medium text-text mb-2">Email (Optional)</label>
           <input
+            id="step1_email"
+            autoComplete="email"
             {...register("email")}
             type="email"
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
@@ -44,8 +50,10 @@ export const Step1PersonalInfo = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-text mb-2">City <span className="text-red-500">*</span></label>
+          <label htmlFor="step1_city" className="block text-sm font-medium text-text mb-2">City <span className="text-red-500">*</span></label>
           <input
+            id="step1_city"
+            autoComplete="address-level2"
             {...register("city")}
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
             placeholder="New Delhi"
@@ -56,8 +64,9 @@ export const Step1PersonalInfo = () => {
 
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-text mb-2">Age <span className="text-red-500">*</span></label>
+          <label htmlFor="step1_age" className="block text-sm font-medium text-text mb-2">Age <span className="text-red-500">*</span></label>
           <input
+            id="step1_age"
             {...register("age")}
             type="number"
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
@@ -67,8 +76,10 @@ export const Step1PersonalInfo = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-text mb-2">Gender <span className="text-red-500">*</span></label>
+          <label htmlFor="step1_gender" className="block text-sm font-medium text-text mb-2">Gender <span className="text-red-500">*</span></label>
           <select
+            id="step1_gender"
+            autoComplete="sex"
             {...register("gender")}
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-white"
           >

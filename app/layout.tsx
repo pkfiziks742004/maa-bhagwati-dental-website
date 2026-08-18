@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/Facilities/Reception%20Area%20Image.png",
+        url: "/facilities/Reception%20Area%20Image.png",
         width: 1200,
         height: 630,
         alt: "Maa Bhagwati Dental Care Clinic Reception",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "Maa Bhagwati Dental Care",
     description: "Premium dental clinic offering advanced laser and cosmodent treatments.",
     creator: "@mbdentalcare",
-    images: ["/Facilities/Reception%20Area%20Image.png"],
+    images: ["/facilities/Reception%20Area%20Image.png"],
   },
 };
 
@@ -101,7 +101,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": ["Dentist", "MedicalOrganization", "LocalBusiness"],
               "name": "Maa Bhagwati Dental Care",
-              "image": "https://mbdentaljewar.in/Facilities/Reception%20Area%20Image.png",
+              "image": "https://mbdentaljewar.in/facilities/Reception%20Area%20Image.png",
               "@id": "https://mbdentaljewar.in",
               "url": "https://mbdentaljewar.in",
               "telephone": CONTACT_DETAILS.primaryPhone,

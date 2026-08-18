@@ -88,7 +88,7 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
     patientName: "Amit Kumar",
     treatment: "Full Mouth Rehabilitation",
     doctorName: "Dr. Lipton Kaushik",
-    thumbnailUrl: "/Facilities/Consultation%20Room.png",
+    thumbnailUrl: "/facilities/Consultation%20Room.png",
     videoUrl: "https://www.youtube.com/embed/placeholder1"
   },
   {
@@ -96,7 +96,7 @@ export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
     patientName: "Neha Gupta",
     treatment: "Cosmetic Smile Designing",
     doctorName: "Dr. Lipton Kaushik",
-    thumbnailUrl: "/Facilities/Consultation%20Room.png",
+    thumbnailUrl: "/facilities/Consultation%20Room.png",
     videoUrl: "https://www.youtube.com/embed/placeholder2"
   }
 ];

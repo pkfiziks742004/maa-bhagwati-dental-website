@@ -213,23 +213,23 @@ export const ContactSection = () => {
                     )}
 
                     <div className="space-y-1.5">
-                      <label className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Your Name</label>
-                      <input required name="name" type="text" className="w-full px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all placeholder:text-[#94a3b8]" placeholder="John Doe" disabled={isLoading} />
+                      <label htmlFor="contact_name" className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Your Name</label>
+                      <input id="contact_name" required name="name" type="text" autoComplete="name" className="w-full px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all placeholder:text-[#94a3b8]" placeholder="John Doe" disabled={isLoading} />
                     </div>
                     
                     <div className="space-y-1.5">
-                      <label className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Phone Number</label>
-                      <input required name="phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all placeholder:text-[#94a3b8]" placeholder="+91 98765 43210" disabled={isLoading} />
+                      <label htmlFor="contact_phone" className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Phone Number</label>
+                      <input id="contact_phone" required name="phone" type="tel" autoComplete="tel" className="w-full px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all placeholder:text-[#94a3b8]" placeholder="+91 98765 43210" disabled={isLoading} />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Email</label>
-                      <input name="email" type="email" className="w-full px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all placeholder:text-[#94a3b8]" placeholder="you@example.com" disabled={isLoading} />
+                      <label htmlFor="contact_email" className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Email</label>
+                      <input id="contact_email" name="email" type="email" autoComplete="email" className="w-full px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all placeholder:text-[#94a3b8]" placeholder="you@example.com" disabled={isLoading} />
                     </div>
                     
                     <div className="space-y-1.5 flex-grow mb-4">
-                      <label className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Message</label>
-                      <textarea required name="message" className="w-full h-24 md:h-[100px] px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all resize-none placeholder:text-[#94a3b8]" placeholder="How can we help you?" disabled={isLoading}></textarea>
+                      <label htmlFor="contact_message" className="text-[12px] font-bold text-[#64748b] uppercase tracking-wider ml-1">Message</label>
+                      <textarea id="contact_message" required name="message" className="w-full h-24 md:h-[100px] px-4 py-3 rounded-xl border border-[#e2e8f0] bg-white text-sm focus:outline-none focus:border-[#148C87] focus:ring-1 focus:ring-[#148C87] transition-all resize-none placeholder:text-[#94a3b8]" placeholder="How can we help you?" disabled={isLoading}></textarea>
                     </div>
 
                     <button 

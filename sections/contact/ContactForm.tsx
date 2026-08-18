@@ -74,8 +74,10 @@ export const ContactForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid sm:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-text mb-2">Full Name</label>
+            <label htmlFor="contact_form_name" className="block text-sm font-medium text-text mb-2">Full Name</label>
             <input
+              id="contact_form_name"
+              autoComplete="name"
               {...register("fullName")}
               className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-background-light"
               placeholder="John Doe"
@@ -84,8 +86,10 @@ export const ContactForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-text mb-2">Mobile Number</label>
+            <label htmlFor="contact_form_mobile" className="block text-sm font-medium text-text mb-2">Mobile Number</label>
             <input
+              id="contact_form_mobile"
+              autoComplete="tel"
               {...register("mobile")}
               className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-background-light"
               placeholder={CONTACT_DETAILS.primaryPhone.replace(/\D/g, "").slice(-10)}
@@ -96,8 +100,10 @@ export const ContactForm = () => {
 
         <div className="grid sm:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-text mb-2">Email Address</label>
+            <label htmlFor="contact_form_email" className="block text-sm font-medium text-text mb-2">Email Address</label>
             <input
+              id="contact_form_email"
+              autoComplete="email"
               {...register("email")}
               type="email"
               className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-background-light"
@@ -107,8 +113,9 @@ export const ContactForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-text mb-2">Subject</label>
+            <label htmlFor="contact_form_subject" className="block text-sm font-medium text-text mb-2">Subject</label>
             <input
+              id="contact_form_subject"
               {...register("subject")}
               className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-background-light"
               placeholder="Enquiry regarding..."
@@ -118,8 +125,9 @@ export const ContactForm = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-text mb-2">Message</label>
+          <label htmlFor="contact_form_message" className="block text-sm font-medium text-text mb-2">Message</label>
           <textarea
+            id="contact_form_message"
             {...register("message")}
             rows={5}
             className="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-background-light resize-none"

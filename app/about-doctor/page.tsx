@@ -178,7 +178,7 @@ export default function AboutDoctorPage() {
       <section className="py-24">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-8">
-            "Every patient deserves a smile that radiates confidence, achieved without anxiety or pain."
+            &quot;Every patient deserves a smile that radiates confidence, achieved without anxiety or pain.&quot;
           </h2>
           <p className="text-xl text-text/70 leading-relaxed mb-12">
             At Maa Bhagwati Dental Care, we have completely reimagined the dental experience. By investing in European Laser Technology and prioritizing a soothing, luxurious environment, Dr. Kaushik ensures that your visit is not just a medical necessity, but a premium wellness experience.
